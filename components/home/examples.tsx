@@ -1,8 +1,8 @@
-import { Link } from "@tanstack/react-router";
-import { Section } from "@/components/website/common/section";
+import Link from "next/link";
+import { Section } from "@/components/common/section";
 import { ArrowUpRight, Copy, Terminal } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/website/common/icons";
+import { Icons } from "@/components/common/icons";
 import {
   Tooltip,
   TooltipContent,
@@ -12,12 +12,12 @@ import { ExamplesIndex } from "@/registry/examples/__index__";
 
 export const Examples = () => {
   return (
-    <Section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border p-0!">
+    <Section className="bg-border grid grid-cols-1 gap-px p-0! sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {Object.entries(ExamplesIndex).map(([name, example]) => {
         const Component = example.component;
         return (
-          <div key={name} className="relative group/component aspect-square">
-            <div className="absolute inset-x-0 pointer-coarse:opacity-100 opacity-0 group-hover/component:opacity-100 transition-opacity p-4 top-0 flex items-center justify-end">
+          <div key={name} className="group/component relative aspect-square">
+            <div className="absolute inset-x-0 top-0 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100">
               <div className="flex items-center gap-1.5">
                 <Tooltip>
                   <TooltipTrigger
@@ -54,17 +54,16 @@ export const Examples = () => {
               </div>
             </div>
             <Link
-              to="/docs/$"
-              params={{ _splat: "components" }}
-              className="size-full flex items-center justify-center bg-background"
+              href={`/docs/${example.name}`}
+              className="bg-background flex size-full items-center justify-center"
             >
               <Component />
-              <div className="absolute inset-x-0 py-4 px-5 bottom-0 flex items-center justify-between">
-                <span className="text-sm text-muted-foreground capitalize truncate group-hover/component:text-foreground transition-colors">
+              <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-4">
+                <span className="text-muted-foreground group-hover/component:text-foreground truncate text-sm capitalize transition-colors">
                   {example.name}
                 </span>
 
-                <ArrowUpRight className="size-4 pointer-coarse:opacity-100 opacity-0 group-hover/component:opacity-100 transition-opacity" />
+                <ArrowUpRight className="size-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100" />
               </div>
             </Link>
           </div>

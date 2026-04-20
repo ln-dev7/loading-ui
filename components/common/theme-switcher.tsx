@@ -1,13 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 export const ThemeSwitcher = ({
   className,
   onClick,
   ...props
 }: React.ComponentProps<typeof Button>) => {
-  const { toggleTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   return (
     <Button
@@ -21,7 +23,7 @@ export const ThemeSwitcher = ({
         onClick?.(event);
 
         if (!event.defaultPrevented) {
-          toggleTheme();
+          setTheme(resolvedTheme === "dark" ? "light" : "dark");
         }
       }}
       {...props}

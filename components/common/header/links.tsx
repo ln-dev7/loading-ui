@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { EMAIL } from "@/lib/constants";
@@ -11,17 +11,15 @@ export function Links({ className }: LinksProps) {
   const links = [
     {
       label: "Docs",
-      to: "/docs/$" as const,
-      params: { _splat: "" } as const,
+      href: "/docs",
     },
     {
       label: "Components",
-      to: "/docs/$" as const,
-      params: { _splat: "components" } as const,
+      href: "/docs/components",
     },
     {
       label: "Sponsor",
-      to: `mailto:${EMAIL}` as const,
+      href: `mailto:${EMAIL}`,
     },
   ] as const;
 
@@ -30,8 +28,7 @@ export function Links({ className }: LinksProps) {
       {links.map(link => (
         <Link
           key={link.label}
-          to={link.to}
-          params={"params" in link ? link.params : undefined}
+          href={link.href}
           className={cn(
             navigationMenuTriggerStyle(),
             "h-auto bg-transparent px-3 py-1.5 shadow-none transition-all",

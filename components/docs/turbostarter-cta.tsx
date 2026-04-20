@@ -9,12 +9,12 @@ export function TurbostarterCta({
   return (
     <div
       className={cn(
-        "group relative flex border-y flex-col gap-2 bg-surface p-6 text-sm text-surface-foreground",
+        "group bg-surface text-surface-foreground relative flex flex-col gap-2 border-y p-6 text-sm",
         className,
       )}
       {...props}
     >
-      <div className="text-base leading-tight font-semibold text-balance group-hover:underline underline-offset-2">
+      <div className="text-base leading-tight font-semibold text-balance underline-offset-2 group-hover:underline">
         Build your SaaS in days, not months. On all platforms.
       </div>
       <div className="text-muted-foreground">

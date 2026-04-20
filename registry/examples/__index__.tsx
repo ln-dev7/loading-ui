@@ -11,7 +11,8 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       const mod = await import("./ring-demo.tsx");
       const exportName =
         Object.keys(mod).find(
-          key => typeof mod[key] === "function" || typeof mod[key] === "object",
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "ring-demo";
       return { default: mod.default || mod[exportName] };
     }),
@@ -23,7 +24,8 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       const mod = await import("./spokes-demo.tsx");
       const exportName =
         Object.keys(mod).find(
-          key => typeof mod[key] === "function" || typeof mod[key] === "object",
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "spokes-demo";
       return { default: mod.default || mod[exportName] };
     }),

@@ -10,8 +10,9 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Link, useLocation } from "@tanstack/react-router";
+import Link from "next/link";
 import { PAGES_NEW } from "@/lib/docs";
+import { usePathname } from "next/navigation";
 
 const EXCLUDED_SECTIONS = new Set<string>([]);
 const EXCLUDED_PAGES = new Set<string>([]);
@@ -20,9 +21,7 @@ export function DocsSidebar({
   tree,
   ...props
 }: React.ComponentProps<typeof Sidebar> & { tree: typeof source.pageTree }) {
-  const pathname = useLocation({
-    select: location => location.pathname,
-  });
+  const pathname = usePathname();
   const topLevelPages = tree.children.filter(
     (
       item,
@@ -35,7 +34,7 @@ export function DocsSidebar({
 
   return (
     <Sidebar
-      className="sticky top-(--header-height) z-30 hidden h-[calc(100svh-var(--header-height))] overscroll-none border-r bg-transparent [--sidebar-menu-width:--spacing(56)] lg:flex px-4"
+      className="sticky top-(--header-height) z-30 hidden h-[calc(100svh-var(--header-height))] overscroll-none border-r bg-transparent px-4 [--sidebar-menu-width:--spacing(56)] lg:flex"
       collapsible="none"
       {...props}
     >

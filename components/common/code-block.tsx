@@ -5,7 +5,7 @@ import * as React from "react";
 import { useConfig } from "@/hooks/use-config";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Terminal } from "lucide-react";
-import { CopyButton } from "@/components/website/common/copy-button";
+import { CopyButton } from "@/components/common/copy-button";
 
 export function CodeBlockCommand({
   __npm__,
@@ -35,7 +35,7 @@ export function CodeBlockCommand({
       <Tabs
         value={packageManager}
         className="gap-0"
-        onValueChange={(value) => {
+        onValueChange={value => {
           setConfig({
             ...config,
             packageManager: value as "pnpm" | "npm" | "yarn" | "bun",

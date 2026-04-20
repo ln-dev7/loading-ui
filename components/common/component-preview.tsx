@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { getRegistryComponent } from "@/lib/registry";
-import { ComponentSource } from "@/components/website/common/component-source";
+import { ComponentSource } from "@/components/common/component-source";
 import { ComponentPreviewTabs } from "./component-preview-tabs";
 
 export function ComponentPreview({
@@ -24,9 +24,9 @@ export function ComponentPreview({
 
   if (!Component) {
     return (
-      <p className="mt-6 text-sm text-muted-foreground">
+      <p className="text-muted-foreground mt-6 text-sm">
         Component{" "}
-        <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm">
+        <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
           {name}
         </code>{" "}
         not found in registry.
@@ -41,18 +41,9 @@ export function ComponentPreview({
       align={align}
       hideCode={hideCode}
       component={React.createElement(Component)}
-      source={
-        <ComponentSource
-          name={name}
-          collapsible={false}
-        />
-      }
+      source={<ComponentSource name={name} collapsible={false} />}
       sourcePreview={
-        <ComponentSource
-          name={name}
-          collapsible={false}
-          maxLines={3}
-        />
+        <ComponentSource name={name} collapsible={false} maxLines={3} />
       }
       {...props}
     />
@@ -65,7 +56,7 @@ export function ComponentPreview({
         className="flex flex-col data-[hide-code=true]:gap-4"
       >
         {content}
-        <figcaption className="-mt-8 text-center text-sm text-muted-foreground data-[hide-code=true]:mt-0">
+        <figcaption className="text-muted-foreground -mt-8 text-center text-sm data-[hide-code=true]:mt-0">
           {caption}
         </figcaption>
       </figure>

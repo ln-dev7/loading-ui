@@ -1,5 +1,5 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Icons } from "@/components/website/common/icons";
+import { Icons } from "@/components/common/icons";
 import { GITHUB_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 

@@ -1,14 +1,14 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { isMarkdownPreferred, rewritePath } from 'fumadocs-core/negotiation';
-import { docsContentRoute, docsRoute } from '@/lib/shared';
+import { NextRequest, NextResponse } from "next/server";
+import { isMarkdownPreferred, rewritePath } from "fumadocs-core/negotiation";
+import { DOCS_CONTENT_ROUTE, DOCS_ROUTE } from "@/lib/constants";
 
 const { rewrite: rewriteDocs } = rewritePath(
-  `${docsRoute}{/*path}`,
-  `${docsContentRoute}{/*path}/content.md`,
+  `${DOCS_ROUTE}{/*path}`,
+  `${DOCS_CONTENT_ROUTE}{/*path}/content.md`,
 );
 const { rewrite: rewriteSuffix } = rewritePath(
-  `${docsRoute}{/*path}.mdx`,
-  `${docsContentRoute}{/*path}/content.md`,
+  `${DOCS_ROUTE}{/*path}.mdx`,
+  `${DOCS_CONTENT_ROUTE}{/*path}/content.md`,
 );
 
 export default function proxy(request: NextRequest) {

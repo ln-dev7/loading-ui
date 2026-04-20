@@ -5,9 +5,9 @@ import { highlightCode } from "@/lib/highlight-code";
 import { readFileFromRoot } from "@/lib/read-file";
 import { getDemoItem, getRegistryItem } from "@/lib/registry";
 import { cn } from "@/lib/utils";
-import { CodeCollapsibleWrapper } from "@/components/website/common/code-collapsible-wrapper";
-import { CopyButton } from "@/components/website/common/copy-button";
-import { getIconForLanguageExtension } from "@/components/website/common/icons";
+import { CodeCollapsibleWrapper } from "@/components/common/code-collapsible-wrapper";
+import { CopyButton } from "@/components/common/copy-button";
+import { getIconForLanguageExtension } from "@/components/common/icons";
 
 export async function ComponentSource({
   name,
@@ -94,7 +94,7 @@ function ComponentCode({
       {title && (
         <figcaption
           data-rehype-pretty-code-title=""
-          className="flex items-center gap-2 text-code-foreground [&_svg]:size-4 [&_svg]:text-code-foreground [&_svg]:opacity-70"
+          className="text-code-foreground [&_svg]:text-code-foreground flex items-center gap-2 [&_svg]:size-4 [&_svg]:opacity-70"
           data-language={language}
         >
           {getIconForLanguageExtension(language)}

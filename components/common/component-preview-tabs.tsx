@@ -46,7 +46,7 @@ export function ComponentPreviewTabs({
         <div
           data-slot="code"
           data-mobile-code-visible={isMobileCodeVisible}
-          className="relative overflow-hidden **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex **:data-rehype-pretty-code-figure:m-0! **:data-rehype-pretty-code-figure:rounded-t-none **:data-rehype-pretty-code-figure:border-t [&_pre]:max-h-72"
+          className="relative overflow-hidden **:data-rehype-pretty-code-figure:m-0! **:data-rehype-pretty-code-figure:rounded-t-none **:data-rehype-pretty-code-figure:border-t **:data-[slot=copy-button]:right-4 **:data-[slot=copy-button]:hidden data-[mobile-code-visible=true]:**:data-[slot=copy-button]:flex [&_pre]:max-h-72"
         >
           {isMobileCodeVisible ? (
             source
@@ -65,7 +65,7 @@ export function ComponentPreviewTabs({
                   type="button"
                   size="sm"
                   variant="outline"
-                  className="relative z-10 rounded-lg bg-background text-foreground shadow-none hover:bg-muted dark:bg-background dark:text-foreground dark:hover:bg-muted"
+                  className="bg-background text-foreground hover:bg-muted dark:bg-background dark:text-foreground dark:hover:bg-muted relative z-10 rounded-lg shadow-none"
                   onClick={() => {
                     setIsMobileCodeVisible(true);
                   }}

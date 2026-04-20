@@ -3,6 +3,8 @@ import { Inter, Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./global.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Header } from "@/components/common/header";
+import { ThemeProvider } from "next-themes";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -10,7 +12,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export default function Layout({ children }: LayoutProps<"/">) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
@@ -21,13 +23,27 @@ export default function Layout({ children }: LayoutProps<"/">) {
         data-slot="layout"
         className="group/layout bg-background relative z-10 flex min-h-svh flex-col [--footer-height:--spacing(14)] [--header-height:--spacing(14)]"
       >
-        <RootProvider
-          theme={{
-            enabled: false,
-          }}
+        <ThemeProvider
+          attribute="class"
+          enableSystem
+          disableTransitionOnChange
+          scriptProps={
+            typeof window === "undefined"
+              ? undefined
+              : ({ type: "application/json" } as const)
+          }
         >
-          <TooltipProvider>{children}</TooltipProvider>
-        </RootProvider>
+          <RootProvider
+            theme={{
+              enabled: false,
+            }}
+          >
+            <TooltipProvider>
+              <Header />
+              {children}
+            </TooltipProvider>
+          </RootProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

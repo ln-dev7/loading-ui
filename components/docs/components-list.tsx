@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { PAGES_NEW } from "@/lib/docs";
 
 import { getPagesFromFolder, type PageTreeFolder } from "@/lib/page-tree";
@@ -12,10 +12,10 @@ export function ComponentsList({
 
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-x-8 lg:gap-x-16 lg:gap-y-6 xl:gap-x-20">
-      {list.map((component) => (
+      {list.map(component => (
         <Link
           key={component.$id}
-          to={component.url}
+          href={component.url}
           className="inline-flex items-center gap-2 text-lg font-medium underline-offset-4 hover:underline md:text-base"
         >
           {component.name}

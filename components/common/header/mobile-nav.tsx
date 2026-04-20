@@ -1,14 +1,19 @@
 "use client";
 
 import * as React from "react";
-import { Link, useLocation } from "@tanstack/react-router";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { PAGES_NEW } from "@/lib/docs";
 import { getPagesFromFolder } from "@/lib/page-tree";
 import { type source } from "@/lib/source";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const SIDEBAR_LINK_CLASS_NAME =
   "data-[active=true]:border-accent data-[active=true]:bg-accent relative flex h-[30px] w-fit items-center gap-2 overflow-visible rounded-md border border-transparent px-2 text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md";
@@ -23,9 +28,7 @@ export function MobileNav({
   className?: string;
 }) {
   const [open, setOpen] = React.useState(false);
-  const pathname = useLocation({
-    select: location => location.pathname,
-  });
+  const pathname = usePathname();
   const topLevelPages = tree.children.filter(
     (
       item,
@@ -53,13 +56,13 @@ export function MobileNav({
         <div className="relative size-4">
           <span
             className={cn(
-              "absolute left-0 block h-0.5 w-4 bg-foreground transition-all duration-100",
+              "bg-foreground absolute left-0 block h-0.5 w-4 transition-all duration-100",
               open ? "top-[0.4rem] -rotate-45" : "top-1",
             )}
           />
           <span
             className={cn(
-              "absolute left-0 block h-0.5 w-4 bg-foreground transition-all duration-100",
+              "bg-foreground absolute left-0 block h-0.5 w-4 transition-all duration-100",
               open ? "top-[0.4rem] rotate-45" : "top-2.5",
             )}
           />
@@ -76,7 +79,7 @@ export function MobileNav({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger render={trigger} />
       <PopoverContent
-        className="no-scrollbar max-h-[calc(100svh-var(--header-height)-1.5rem)] w-[min(24rem,calc(100vw-2rem))] overflow-y-auto rounded-none border-none bg-background/90 p-0 shadow-none backdrop-blur duration-100 data-open:animate-none!"
+        className="no-scrollbar bg-background/90 max-h-[calc(100svh-var(--header-height)-1.5rem)] w-[min(24rem,calc(100vw-2rem))] overflow-y-auto rounded-none border-none p-0 shadow-none backdrop-blur duration-100 data-open:animate-none!"
         align="start"
         side="bottom"
         alignOffset={-16}
@@ -84,7 +87,7 @@ export function MobileNav({
       >
         <div className="flex flex-col gap-12 overflow-auto px-6 py-6">
           <div className="flex flex-col gap-4">
-            <div className="text-sm font-medium text-muted-foreground">
+            <div className="text-muted-foreground text-sm font-medium">
               Menu
             </div>
             <div className="flex flex-col gap-1">
@@ -109,7 +112,7 @@ export function MobileNav({
           </div>
           {topLevelPages.length > 0 ? (
             <div className="flex flex-col gap-4">
-              <div className="text-sm font-medium text-muted-foreground">
+              <div className="text-muted-foreground text-sm font-medium">
                 Docs
               </div>
               <div className="flex flex-col gap-1">
@@ -134,8 +137,11 @@ export function MobileNav({
           ) : null}
           <div className="flex flex-col gap-8">
             {groups.map(group => (
-              <div key={group.$id ?? group.name} className="flex flex-col gap-4">
-                <div className="text-sm font-medium text-muted-foreground">
+              <div
+                key={group.$id ?? group.name}
+                className="flex flex-col gap-4"
+              >
+                <div className="text-muted-foreground text-sm font-medium">
                   {group.name}
                 </div>
                 <div className="flex flex-col gap-1">

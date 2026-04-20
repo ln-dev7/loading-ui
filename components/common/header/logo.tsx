@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/website/common/icons";
+import { Icons } from "@/components/common/icons";
 
 export const Logo = ({
   className,

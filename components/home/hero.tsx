@@ -1,6 +1,6 @@
 import { Ring } from "@/registry/ui/ring";
-import { Installer } from "@/components/website/common/installer";
-import { Section } from "@/components/website/common/section";
+import { Installer } from "@/components/common/installer";
+import { Section } from "@/components/common/section";
 
 export const Hero = () => {
   return (
@@ -22,7 +22,7 @@ export const Hero = () => {
         <div className="mx-auto inline-flex w-fit flex-wrap items-center gap-3">
           <Installer
             command="npx shadcn add @loading-ui/ring"
-            className="text-xs w-64 md:w-72"
+            className="w-64 text-xs md:w-72"
           />
         </div>
       </div>
