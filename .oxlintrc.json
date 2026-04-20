@@ -26,7 +26,8 @@
     }
   },
   "rules": {
-    "no-unsafe-type-assertion": "off"
+    "no-unsafe-type-assertion": "off",
+    "no-unassigned-import": "off"
   },
   "ignorePatterns": ["node_modules/", "dist/"],
   "options": {

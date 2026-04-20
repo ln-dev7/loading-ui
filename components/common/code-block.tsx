@@ -35,7 +35,7 @@ export function CodeBlockCommand({
       <Tabs
         value={packageManager}
         className="gap-0"
-        onValueChange={value => {
+        onValueChange={(value) => {
           setConfig({
             ...config,
             packageManager: value as "pnpm" | "npm" | "yarn" | "bun",

@@ -19,7 +19,7 @@ export const ThemeSwitcher = ({
       aria-label="Toggle theme"
       title="Toggle theme"
       className={cn("group/toggle extend-touch-target relative", className)}
-      onClick={event => {
+      onClick={(event) => {
         onClick?.(event);
 
         if (!event.defaultPrevented) {

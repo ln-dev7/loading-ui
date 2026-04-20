@@ -9,6 +9,8 @@ import { findNeighbour } from "fumadocs-core/page-tree";
 import { DocsTableOfContents } from "@/components/docs/toc";
 import { TurbostarterCta } from "@/components/docs/turbostarter-cta";
 import { mdxComponents } from "@/components/mdx";
+import { Metadata } from "next";
+import { createMetadata } from "@/lib/metadata";
 
 export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const params = await props.params;
@@ -25,7 +27,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   return (
     <div
       data-slot="docs"
-      className="flex scroll-mt-24 items-stretch text-[1.05rem] sm:text-[15px] w-full"
+      className="flex w-full scroll-mt-24 items-stretch text-[1.05rem] sm:text-[15px]"
     >
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="h-(--top-spacing) shrink-0" />
@@ -87,7 +89,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
           <div className="w-full flex-1 *:data-[slot=alert]:first:mt-0">
             <MDX components={mdxComponents} />
           </div>
-          <div className="h-16 w-full items-center gap-2 flex">
+          <div className="flex h-16 w-full items-center gap-2">
             {neighbours.previous ? (
               <Link
                 href={neighbours.previous.url}
@@ -135,18 +137,29 @@ export async function generateStaticParams() {
   return source.generateParams();
 }
 
-// export async function generateMetadata(
-//   props: PageProps<"/docs/[[...slug]]">,
-// ): Promise<Metadata> {
-//   const params = await props.params;
-//   const page = source.getPage(params.slug);
-//   if (!page) notFound();
+export async function generateMetadata({
+  params,
+}: PageProps<"/docs/[[...slug]]">): Promise<Metadata> {
+  const { slug = [] } = await params;
+  const page = source.getPage(slug);
 
-//   return {
-//     title: page.data.title,
-//     description: page.data.description,
-//     openGraph: {
-//       images: getPageImage(page).url,
-//     },
-//   };
-// }
+  if (!page) {
+    return notFound();
+  }
+
+  const image = ["/api/og", ...slug, "image.png"].join("/");
+
+  return createMetadata({
+    title: page.data.title,
+    openGraph: {
+      url: `/docs/${page.slugs.join("/")}`,
+      images: [image],
+    },
+    twitter: {
+      images: [image],
+    },
+    ...(page.data.description && {
+      description: page.data.description,
+    }),
+  });
+}

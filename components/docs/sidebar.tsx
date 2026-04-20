@@ -45,7 +45,7 @@ export function DocsSidebar({
           <SidebarGroup className="pt-6">
             <SidebarGroupContent>
               <SidebarMenu>
-                {topLevelPages.map(item => (
+                {topLevelPages.map((item) => (
                   <SidebarMenuItem key={item.url}>
                     <SidebarMenuButton
                       isActive={item.url === pathname}
@@ -69,7 +69,7 @@ export function DocsSidebar({
             </SidebarGroupContent>
           </SidebarGroup>
         )}
-        {tree.children.map(item => {
+        {tree.children.map((item) => {
           if (EXCLUDED_SECTIONS.has(item.$id ?? "")) {
             return null;
           }
@@ -85,7 +85,7 @@ export function DocsSidebar({
               </SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
-                  {getPagesFromFolder(item).map(page => {
+                  {getPagesFromFolder(item).map((page) => {
                     if (EXCLUDED_PAGES.has(page.url)) {
                       return null;
                     }

@@ -98,7 +98,7 @@ export function MobileNav({
               >
                 Home
               </MobileNavLink>
-              {items.map(item => (
+              {items.map((item) => (
                 <MobileNavLink
                   key={item.href}
                   href={item.href}
@@ -116,7 +116,7 @@ export function MobileNav({
                 Docs
               </div>
               <div className="flex flex-col gap-1">
-                {topLevelPages.map(item => (
+                {topLevelPages.map((item) => (
                   <MobileNavLink
                     key={item.url}
                     href={item.url}
@@ -136,7 +136,7 @@ export function MobileNav({
             </div>
           ) : null}
           <div className="flex flex-col gap-8">
-            {groups.map(group => (
+            {groups.map((group) => (
               <div
                 key={group.$id ?? group.name}
                 className="flex flex-col gap-4"
@@ -145,7 +145,7 @@ export function MobileNav({
                   {group.name}
                 </div>
                 <div className="flex flex-col gap-1">
-                  {getPagesFromFolder(group).map(page => (
+                  {getPagesFromFolder(group).map((page) => (
                     <MobileNavLink
                       key={page.url}
                       href={page.url}

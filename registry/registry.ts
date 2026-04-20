@@ -1,10 +1,10 @@
-import { SITE } from "@/lib/metadata";
 import { registrySchema } from "shadcn/schema";
 
 import { ui } from "./ui/_registry";
 import { lib } from "./lib/_registry";
 import { z } from "zod";
 import { registryItemSchema } from "./schema";
+import { baseUrl } from "@/lib/metadata";
 
 const BASE_STYLE = {
   type: "registry:style",
@@ -17,8 +17,8 @@ const BASE_STYLE = {
 };
 
 export const registry = registrySchema.parse({
-  name: SITE.id,
-  homepage: SITE.url,
+  name: "loading-ui",
+  homepage: baseUrl,
   items: z.array(registryItemSchema).parse([
     {
       name: "index",

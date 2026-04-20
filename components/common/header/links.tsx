@@ -25,7 +25,7 @@ export function Links({ className }: LinksProps) {
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
-      {links.map(link => (
+      {links.map((link) => (
         <Link
           key={link.label}
           href={link.href}

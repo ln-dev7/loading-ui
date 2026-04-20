@@ -40,7 +40,8 @@ export const Index: Record<string, any> = {
       const mod = await import("@/registry/ui/ring.tsx");
       const exportName =
         Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object",
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
@@ -63,7 +64,8 @@ export const Index: Record<string, any> = {
       const mod = await import("@/registry/ui/spokes.tsx");
       const exportName =
         Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object",
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
@@ -86,7 +88,8 @@ export const Index: Record<string, any> = {
       const mod = await import("@/registry/ui/classic.tsx");
       const exportName =
         Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object",
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
@@ -109,7 +112,8 @@ export const Index: Record<string, any> = {
       const mod = await import("@/registry/ui/analyzing-image.tsx");
       const exportName =
         Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object",
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
@@ -132,7 +136,8 @@ export const Index: Record<string, any> = {
       const mod = await import("@/registry/lib/utils.ts");
       const exportName =
         Object.keys(mod).find(
-          (key) => typeof mod[key] === "function" || typeof mod[key] === "object",
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || item.name;
       return { default: mod.default || mod[exportName] };
     }),
