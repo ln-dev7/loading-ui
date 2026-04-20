@@ -1,12 +1,19 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "plugins": [
+    "eslint",
     "typescript",
-    "react",
+    "oxc",
     "import",
-    "nextjs"
+    "jsdoc",
+    "node",
+    "promise"
   ],
-  "categories": {},
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "error"
+  },
   "env": {
     "builtin": true
   },
@@ -15,15 +22,15 @@
       "version": "19.2.5"
     },
     "tailwindcss": {
-      "callees": [
-        "clsx",
-        "cva",
-        "cn"
-      ]
+      "callees": ["clsx", "cva", "cn"]
     }
   },
-  "ignorePatterns": [
-    "node_modules/",
-    "dist/"
-  ]
+  "rules": {
+    "no-unsafe-type-assertion": "off"
+  },
+  "ignorePatterns": ["node_modules/", "dist/"],
+  "options": {
+    "typeAware": true,
+    "typeCheck": true
+  }
 }
