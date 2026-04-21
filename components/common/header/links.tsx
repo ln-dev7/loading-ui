@@ -3,29 +3,29 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { EMAIL } from "@/lib/constants";
 
+export const LINKS = [
+  {
+    label: "Docs",
+    href: "/docs",
+  },
+  {
+    label: "Components",
+    href: "/docs/components",
+  },
+  {
+    label: "Sponsor",
+    href: `mailto:${EMAIL}`,
+  },
+];
+
 type LinksProps = {
   className?: string;
 };
 
 export function Links({ className }: LinksProps) {
-  const links = [
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Components",
-      href: "/docs/components",
-    },
-    {
-      label: "Sponsor",
-      href: `mailto:${EMAIL}`,
-    },
-  ] as const;
-
   return (
     <div className={cn("flex items-center gap-1", className)}>
-      {links.map((link) => (
+      {LINKS.map(link => (
         <Link
           key={link.label}
           href={link.href}

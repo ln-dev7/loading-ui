@@ -1,4 +1,4 @@
-import { Links } from "@/components/common/header/links";
+import { LINKS, Links } from "@/components/common/header/links";
 import { Logo } from "@/components/common/header/logo";
 import Link from "next/link";
 
@@ -8,13 +8,14 @@ import { GitHub } from "@/components/common/header/github";
 import { ThemeSwitcher } from "@/components/common/theme-switcher";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { source } from "@/lib/source";
+import { MobileNav } from "@/components/common/header/mobile-nav";
 
 export const Header = () => {
   return (
     <div className="bg-fd-background/80 sticky inset-x-0 top-0 z-40 h-(--header-height) border-b backdrop-blur-sm transition-colors">
-      <div className="container mx-auto flex size-full items-center justify-between px-4">
+      <div className="container mx-auto flex size-full items-center justify-between px-3 md:px-4">
         <div className="flex items-center gap-3">
-          {/* <MobileNav tree={tree} items={items} className="md:hidden" /> */}
           <Link
             className={cn(
               buttonVariants({ variant: "ghost" }),
@@ -32,6 +33,11 @@ export const Header = () => {
           <GitHub />
           <Turbostarter className="hidden md:flex" />
           <ThemeSwitcher />
+          <MobileNav
+            tree={source.pageTree}
+            items={LINKS}
+            className="md:hidden"
+          />
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ export const Hero = () => {
         <div className="mx-auto inline-flex w-fit flex-wrap items-center gap-3">
           <Installer
             command={getCLICommand(Object.keys(Index)[0])}
-            className="w-64 text-xs md:w-72"
+            className="w-60 text-xs md:w-72"
           />
         </div>
       </div>
