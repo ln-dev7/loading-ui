@@ -12,6 +12,59 @@ import { getCLICommand, getRegistryItem } from "@/lib/registry";
 import { Index } from "@/registry/__index__";
 import { ExamplesIndex } from "@/registry/examples/__index__";
 import { CopyButton } from "@/components/common/copy-button";
+import { RegistryItem } from "@/registry/schema";
+
+const CopyComponent = ({ item }: { item: RegistryItem }) => {
+  return (
+    <Tooltip>
+      <TooltipTrigger
+        render={
+          <CopyButton
+            variant="secondary"
+            size="icon"
+            value={item?.files?.[0]?.content ?? ""}
+            className="static size-9 bg-secondary"
+          />
+        }
+      />
+      <TooltipContent sideOffset={8}>Copy component</TooltipContent>
+    </Tooltip>
+  );
+};
+
+const CopyCLICommand = ({ item }: { item: RegistryItem }) => {
+  return (
+    <Tooltip>
+      <TooltipTrigger
+        render={
+          <CopyButton
+            variant="secondary"
+            size="icon"
+            value={getCLICommand(item.name)}
+            className="static size-9 bg-secondary"
+            icon={<Terminal />}
+          />
+        }
+      />
+      <TooltipContent sideOffset={8}>Copy CLI command</TooltipContent>
+    </Tooltip>
+  );
+};
+
+const OpenInV0 = ({ item }: { item: RegistryItem }) => {
+  return (
+    <Tooltip>
+      <TooltipTrigger
+        render={
+          <Button variant="secondary" size="icon">
+            <Icons.v0 className="size-4" />
+          </Button>
+        }
+      />
+      <TooltipContent sideOffset={8}>Open in v0</TooltipContent>
+    </Tooltip>
+  );
+};
 
 export const Examples = async () => {
   const tiles = await Promise.all(
@@ -40,46 +93,9 @@ export const Examples = async () => {
           <div key={name} className="group/component relative aspect-square">
             <div className="absolute inset-x-0 z-10 top-0 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100">
               <div className="flex items-center gap-1.5">
-                <Tooltip>
-                  <TooltipTrigger
-                    render={
-                      <CopyButton
-                        variant="secondary"
-                        size="icon"
-                        value={item?.files?.[0]?.content ?? ""}
-                        className="static size-9 bg-secondary"
-                      />
-                    }
-                  />
-                  <TooltipContent sideOffset={8}>Copy component</TooltipContent>
-                </Tooltip>
-
-                <Tooltip>
-                  <TooltipTrigger
-                    render={
-                      <CopyButton
-                        variant="secondary"
-                        size="icon"
-                        value={getCLICommand(item.name)}
-                        className="static size-9 bg-secondary"
-                        icon={<Terminal />}
-                      />
-                    }
-                  />
-                  <TooltipContent sideOffset={8}>
-                    Copy CLI command
-                  </TooltipContent>
-                </Tooltip>
-                <Tooltip>
-                  <TooltipTrigger
-                    render={
-                      <Button variant="secondary" size="icon">
-                        <Icons.v0 className="size-4" />
-                      </Button>
-                    }
-                  />
-                  <TooltipContent sideOffset={8}>Open in v0</TooltipContent>
-                </Tooltip>
+                <CopyComponent item={item} />
+                <CopyCLICommand item={item} />
+                <OpenInV0 item={item} />
               </div>
             </div>
             <Link
