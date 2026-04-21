@@ -1,183 +1,97 @@
 # Contributing to Loading UI
 
-Thank you for your interest in contributing to Loading UI. This repository is a collection of reusable loading components and patterns for modern web apps.
+Thanks for your interest in contributing. Before opening a pull request, please check existing issues and pull requests so work does not overlap.
 
-## Prerequisites
+## About this repository
 
-This project uses [Bun](https://bun.sh) as its package manager and runtime. To install:
+Loading UI is a Next.js project with a component registry and docs site.
 
-```sh
-# Linux & macOS
-curl -fsSL https://bun.sh/install | bash
+- We use [Bun](https://bun.sh) for package management and scripts.
+- We use [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) for linting.
+- We use [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) for formatting.
+- We use a local registry build step to publish installable component artifacts.
 
-# Windows
-powershell -c "irm bun.sh/install.ps1 | iex"
-```
+## Repository structure
 
-## Getting Started
+| Path | Description |
+| --- | --- |
+| `app/` | App Router routes, docs pages, and API routes. |
+| `components/` | Shared site UI and reusable React components. |
+| `content/` | MDX content for the documentation site. |
+| `registry/` | Registry source files and registry build scripts. |
+| `public/r/` | Generated registry artifacts consumed by the installer. |
 
-1. **Fork and Clone**
+## Getting started
+
+1. Fork the repository.
+2. Clone your fork locally.
 
    ```sh
    git clone https://github.com/YOUR_USERNAME/loading-ui.git
    cd loading-ui
    ```
 
-2. **Install Dependencies**
+3. Create a branch for your work.
+
+   ```sh
+   git checkout -b my-change
+   ```
+
+4. Install dependencies.
 
    ```sh
    bun install
    ```
 
-3. **Development Setup**
+5. Start the dev server.
 
-   We recommend using VSCode (or a fork like [Cursor](https://www.cursor.com) or [Windsurf](https://windsurf.com)) with the [recommended extensions](./.vscode/extensions.json) installed:
-   - Arktype
-   - Biome (formatter/linter)
-   - MDX support
-   - Vitest Explorer
-
-4. **Start Development**
    ```sh
    bun run dev
    ```
-   This starts the Next.js dev server.
 
-## Project Structure
+## Making changes
 
-This repository contains:
+- Keep changes focused. Small, reviewable pull requests get merged faster.
+- Follow the existing component patterns and naming conventions.
+- Prefer accessibility, composability, and predictable APIs over one-off variants.
+- If you change registry sources, regenerate the registry output before opening a PR.
+- If behavior changes, update docs or examples in a follow-up change as needed.
 
-- `app/` - Next.js app routes, docs pages, and API routes
-- `components/` - Loading components and supporting UI primitives
-- `content/` - MDX documentation content
-- `registry/` - Component registry sources and build scripts
+## Quality checks
 
-## Development Workflow
+Run these before opening a pull request:
 
-### Creating Changes
+```sh
+bun run lint
+bun run format
+bun run build
+```
 
-1. **Create a Feature Branch**
+If your change touches the registry, also run:
 
-   ```sh
-   git checkout -b feature/your-feature-name
-   ```
+```sh
+bun run build:registry
+```
 
-   > **Important:** Always create pull requests from feature branches, not from your main branch.
+There is no dedicated automated test suite in this repository yet, so lint, format, build, and a manual verification of your change are the minimum bar.
 
-2. **Make Your Changes**
-   - Keep components focused, composable, and accessible
-   - Prefer consistent API design across loading primitives
-   - Update docs/examples when component behavior changes
-   - Add tests if a change introduces non-trivial behavior
+## Pull requests
 
-3. **Test Your Changes**
-   ```sh
-   # Linting
-   bun run lint
-   # Formatting check
-   bun run format
-   # Optional fixes
-   bun run lint:fix
-   bun run format:fix
-   ```
+Please include:
 
-### Code Style Guidelines
+- A clear summary of what changed and why.
+- A linked issue when one exists.
+- Screenshots or recordings for visible UI changes.
+- Notes about any follow-up work or known limitations.
 
-- **Biome Formatting**: The project uses Biome for code formatting and linting
-- **TypeScript**: Write type-safe code with appropriate type annotations
-- **Meaningful Names**: Use clear, descriptive variable and function names
-- **Self-Documenting Code**: Write code that explains itself; add comments only for complex logic
-- **Consistency**: Follow existing patterns and conventions in the codebase
+Prefer clear commit messages. Conventional Commit style is welcome, but the main requirement is that each commit is easy to understand during review.
 
-### Testing Guidelines
+## Reporting issues and asking for help
 
-- Add tests for new features and bug fixes
-- Include targeted coverage for non-trivial component logic
-- For bug fixes, consider adding a failing regression test first, then implement the fix
-- If tests are added in the future, keep them deterministic and focused
-
-### Commit Guidelines
-
-- Write clear, descriptive commit messages
-- Make focused, atomic commits
-- For bug fixes, create separate commits for tests and fixes when helpful for review
-- Individual commit messages don't need to follow strict conventions (PRs are squashed)
-
-## Pull Request Process
-
-### Before Submitting
-
-1. **Run Quality Checks**
-
-   ```sh
-   bun run lint   # Check for linting issues
-   bun run format # Check formatting
-   ```
-
-2. **Update Documentation**
-   - Update relevant docs in `content/` and `app/docs/`
-   - Ensure examples in `README.md` stay accurate
-
-### Submitting Your PR
-
-1. **PR Description**
-   - Provide a clear description of your changes
-   - Link relevant issues (e.g., "Closes #123")
-   - Explain the motivation and context
-
-2. **Self-Review**
-   - Review your own code before submitting
-   - Check for any obvious issues or improvements
-   - Ensure all files are properly formatted
-
-3. **Keep It Focused**
-   - Keep changes atomic and focused on a single feature/fix
-   - Split large changes into multiple PRs when possible
-
-## Reporting Issues
-
-- **Check Existing Issues**: Search for existing issues before creating new ones
-- **Provide Context**: Include clear reproduction steps, expected behavior, and actual behavior
-- **Include Details**: Add browser/OS/version info and reproduction details
-- **Use Labels**: Apply appropriate labels to help categorize the issue
-
-## Areas for Contribution
-
-### Code Contributions
-
-- New loading components and variants
-- Bug fixes and performance improvements
-- Accessibility improvements
-- Better composition APIs and ergonomics
-
-### Documentation
-
-- Improve existing documentation
-- Add examples for different loading states/use cases
-- Create practical integration guides
-- Fix typos and improve clarity
-
-### Testing
-
-- Add coverage for component state transitions
-- Validate accessibility and visual regressions where practical
-
-## Questions and Support
-
-- **Discussions**: Use GitHub Discussions for questions and general discussion
-- **Issues**: Use GitHub Issues for bug reports and feature requests
-- **Documentation**: Check the docs in this repository
-
-## Review Process
-
-Please note that this project is maintained by individuals with full-time jobs. Reviews are done in spare time, so please allow appropriate time for review. If you haven't received a review within a week, feel free to ping the maintainers.
+- Use GitHub Issues for bugs and concrete feature requests.
+- Use the docs site and community channels for usage questions or open-ended discussion.
+- Do not open public issues for security problems. Use the security policy instead.
 
 ## Code of Conduct
 
-This project follows a Code of Conduct. By participating, you agree to uphold these standards and create a welcoming environment for all contributors.
-
----
-
-## License
-
-[MIT](./LICENSE) License © 2026 [Bartosz Zagrodzki](https://github.com/Bartek532)
+By participating in this project, you agree to follow the [Code of Conduct](./CODE_OF_CONDUCT.md).

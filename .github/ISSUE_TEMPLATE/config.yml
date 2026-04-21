@@ -1,4 +1,11 @@
+blank_issues_enabled: false
 contact_links:
-  - name: Get Help
-    url: https://github.com/turbostarter/loading-ui/discussions/new?category=general
-    about: If you can't get something to work the way you expect, open a question in our discussion forums.
+  - name: Ask a question
+    url: https://discord.gg/KjpK2uk3JP
+    about: Use Discord for help, feedback, and open-ended discussion.
+  - name: Read the docs
+    url: https://loading-ui.com/docs
+    about: Check the documentation before opening an issue.
+  - name: Report a security issue
+    url: https://github.com/turbostarter/loading-ui/security/advisories/new
+    about: Report vulnerabilities privately through GitHub Security Advisories.

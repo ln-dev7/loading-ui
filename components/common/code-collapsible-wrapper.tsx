@@ -26,6 +26,7 @@ export function CodeCollapsibleWrapper({
       {...props}
     >
       <CollapsibleTrigger
+        nativeButton={false}
         render={
           <div className="absolute top-1.5 right-9 z-10 flex items-center">
             <Button

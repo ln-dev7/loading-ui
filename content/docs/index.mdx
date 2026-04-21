@@ -1,30 +1,32 @@
 ---
 title: Introduction
-description: Guides and component reference for loading-ui — loading states and indicators for TanStack Start.
+description: Install loading-ui into your app and build loading states that feel intentional, lightweight, and easy to ship.
 icon: Rocket
 ---
 
-Welcome to **loading-ui**. These docs cover setup, usage philosophy, and individual components you can drop into a **TanStack Start** app alongside your existing UI stack.
+**loading-ui** is a small custom registry of loading indicators for modern React apps. It follows the same copy-paste and CLI-friendly model popularized by [shadcn/ui](https://ui.shadcn.com), but stays focused on one job: giving your product better pending states without introducing a heavy design system or animation framework.
 
-## Quick links
+The project currently ships a compact set of primitives that are meant to drop into the UI you already have instead of forcing a separate visual language.
 
-## What you’ll find
+## Why loading-ui exists
 
-| Topic                          | Page                               |
-| ------------------------------ | ---------------------------------- |
-| Install and wire up primitives | [Usage](/docs/usage)               |
-| Values and constraints         | [Philosophy](/docs/philosophy)     |
-| Help and discussion            | [Community](/docs/community)       |
-| Contributing                   | [Contributing](/docs/contributing) |
+Most teams either ship generic spinners everywhere or rebuild the same loading patterns per product surface. loading-ui sits in the middle:
 
-### Minimal example
+- focused components instead of a full UI kit
+- open code you can own after installation
+- registry-based distribution that fits into existing shadcn-style workflows
+- simple primitives that are easy to adapt to your spacing, color, and motion tokens
 
-```tsx
-import { Spinner } from "@/components/ui/spinner";
+## How it fits into your stack
 
-export function Example() {
-  return <Spinner className="size-6 text-muted-foreground" />;
-}
-```
+loading-ui is designed for apps already using React, Tailwind CSS, and a `components.json` setup compatible with the shadcn CLI. If that is already how your project works, the install path is short: add the registry, install a component, and style it like the rest of your UI.
 
-The site is built with **Fumadocs** on TanStack Start — MDX pages support rich examples alongside navigation and search.
+## Open-source and community
+
+loading-ui is open source, so the code you install is the code you can inspect, change, and ship. That matters for loading states because they usually need product-specific adjustments: timing, scale, accessibility text, or tighter integration with the rest of your interface.
+
+The project is also meant to improve in public. If you find rough edges, want better docs, or have a loading pattern that feels broadly reusable, open an issue or contribute a fix. Small improvements are valuable here because the library is intentionally focused and every addition affects the overall quality bar.
+
+## Start here
+
+If you want to get a component into your app quickly, head to [Usage](/docs/usage). If you are evaluating whether the project matches your design values first, read [Philosophy](/docs/philosophy).

@@ -1,56 +1,108 @@
 ---
 title: Usage
-description: Install loading-ui pieces in your TanStack Start application and drop them into your routes.
+description: Set up the loading-ui registry, install components with the shadcn CLI, and wire them into real loading states.
 icon: BookOpen
 ---
 
-This project ships documentation and UI primitives you can copy or install alongside **shadcn-style** tooling. Adapt paths and package manager commands to match your repo.
+loading-ui is distributed as a [custom shadcn registry](https://ui.shadcn.com/docs/registry). The intended flow is:
+
+1. Make sure your app is already configured for the [shadcn CLI](https://ui.shadcn.com/docs/cli).
+2. Add the `@loading-ui` registry to `components.json`.
+3. Install the components you want.
+4. Use them in pending, loading, or empty-state UI where motion adds clarity.
 
 ## Prerequisites
 
-- A **TanStack Start** (or compatible) React app
-- **Tailwind CSS** configured the same way as your other UI components
+Before installing from this registry, your project should already have:
+
+- a React app
+- Tailwind CSS configured
+- a `components.json` file for the shadcn CLI
+- path aliases that match your component setup
+
+If you do not have `components.json` yet, initialize shadcn first:
+
+```bash
+npx shadcn@latest init
+```
+
+## Configure the Registry
+
+Add `@loading-ui` to the `registries` section of your `components.json`:
+
+```json title="components.json"
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "base-nova",
+  "tailwind": {
+    "css": "app/global.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registries": {
+    "@loading-ui": "https://loading-ui.com/r/{name}.json"
+  }
+}
+```
+
+Once that is in place, the CLI can resolve items like `@loading-ui/ring`.
 
 ## Install a component
 
-Use the CLI where available (see each component page), or copy the source into your codebase and fix imports.
-
-### Example: CLI
+Use the shadcn CLI to pull a component into your project:
 
 ```bash
-npx shadcn@latest add spinner
+npx shadcn add @loading-ui/ring
 ```
 
-### Example: manual
+You can swap `ring` for any registry item you want to try:
 
-<Steps>
+- `@loading-ui/ring`
+- `@loading-ui/spokes`
+- `@loading-ui/classic`
+- `@loading-ui/analyzing-image`
 
-<Step>
-  Copy the component files into your project (for example under
-  `src/components/ui`).
-</Step>
+The installed files are yours. Edit names, classes, motion timing, and import paths to match your app.
 
-<Step>Align **import paths** with your aliases (e.g. `@/components/...`).</Step>
+## Use in real UI
 
-<Step>Ensure shared utilities (`cn`, etc.) exist or adjust imports.</Step>
-
-</Steps>
-
-## Use in a route or layout
+Keep loading indicators close to the action they describe. A good default is to pair motion with enough layout context that users can tell what is currently happening.
 
 ```tsx
-import { Spinner } from "@/components/ui/spinner";
+import { Ring } from "@/components/loading-ui/ring";
 
-export function PendingFallback() {
+export function SaveButton({ isSaving }: { isSaving: boolean }) {
   return (
-    <div className="flex items-center justify-center p-8">
-      <Spinner className="size-6" />
-    </div>
+    <button
+      type="button"
+      disabled={isSaving}
+      className="inline-flex items-center gap-2 rounded-md border px-3 py-2"
+    >
+      {isSaving ? <Ring className="size-4" /> : null}
+      <span>{isSaving ? "Saving..." : "Save changes"}</span>
+    </button>
   );
 }
 ```
 
-## Next steps
+## Usage guidelines
 
-- Browse [Components](/docs/components) for individual APIs and demos.
-- Read [Philosophy](/docs/philosophy) for design constraints and goals.
+- Prefer inline indicators when only part of the screen is pending.
+- Prefer skeletons or preserved layout when content shape matters more than motion.
+- Add accessible labels or nearby copy when the state is not obvious from context.
+- Avoid putting multiple competing loaders in the same viewport.
+
+## Copy-paste instead of CLI
+
+If you do not want to use the registry flow, you can still copy component source directly from the docs and adapt it manually. That works well when your project structure differs from the default shadcn conventions or when you want tighter control over naming and placement.
+
+## Next Step
+
+Browse [Components](/docs/components) when you want a specific primitive, or read [Philosophy](/docs/philosophy) to understand the design constraints behind the library.

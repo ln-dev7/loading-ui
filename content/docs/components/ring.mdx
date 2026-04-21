@@ -1,6 +1,6 @@
 ---
-title: Spinner
-description: An indicator that can be used to show a loading state.
+title: Ring
+description: A circular indeterminate loader for inline actions, page transitions, and general pending states.
 ---
 
 <ComponentPreview name="ring-demo" />
@@ -16,7 +16,7 @@ description: An indicator that can be used to show a loading state.
 <TabsContent value="cli">
 
 ```bash
-npx shadcn@latest add spinner
+npx shadcn add @loading-ui/ring
 ```
 
 </TabsContent>
@@ -25,9 +25,11 @@ npx shadcn@latest add spinner
 
 <Steps className="mb-0 pt-2">
 
-<Step>Copy and paste the following code into your project.</Step>
+<Step>Copy the component source into your project.</Step>
 
-<Step>Update the import paths to match your project setup.</Step>
+<Step>Place it somewhere that matches your aliases, for example `components/ring.tsx`.</Step>
+
+<Step>Make sure your app has a `cn` utility or adjust the import to your own class merge helper.</Step>
 
 </Steps>
 
@@ -35,73 +37,83 @@ npx shadcn@latest add spinner
 
 </CodeTabs>
 
-<ComponentSource name="ring" title="components/ui/spinner.tsx" />
+<ComponentSource name="ring" title="components/ring.tsx" />
 
 ## Usage
 
 ```tsx
-import { Spinner } from "@/components/ui/spinner";
+import { Ring } from "@/components/ring";
 ```
 
 ```tsx
-<Spinner />
+<Ring className="size-4" />
 ```
 
-## Customization
+## Why use it
 
-You can replace the default spinner icon with any other icon by editing the `Spinner` component.
-
-{/* <ComponentPreview styleName="base-nova" name="spinner-custom" /> */}
-
-```tsx showLineNumbers title="components/ui/spinner.tsx"
-import { LoaderIcon } from "lucide-react";
-
-import { cn } from "@/lib/utils";
-
-function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
-  return (
-    <LoaderIcon
-      role="status"
-      aria-label="Loading"
-      className={cn("size-4 animate-spin", className)}
-      {...props}
-    />
-  );
-}
-
-export { Spinner };
-```
+Use `Ring` when you want a loader that reads clearly at a glance and fits naturally into buttons, cards, dialogs, and route-level pending UI. It works well when the user only needs confirmation that work is in progress, not a precise percentage.
 
 ## Examples
 
-### Size
+### Inline action
 
-Use the `size-*` utility class to change the size of the spinner.
+Use `Ring` next to a label when an action is pending.
 
-{/* <ComponentPreview styleName="base-nova" name="spinner-size" /> */}
+```tsx
+import { Ring } from "@/components/ring";
 
-### Button
+export function SaveButton({ isSaving }: { isSaving: boolean }) {
+  return (
+    <button
+      type="button"
+      disabled={isSaving}
+      className="inline-flex items-center gap-2 rounded-md border px-3 py-2"
+    >
+      {isSaving ? <Ring className="size-4" /> : null}
+      <span>{isSaving ? "Saving..." : "Save changes"}</span>
+    </button>
+  );
+}
+```
 
-Add a spinner to a button to indicate a loading state. Place the `<Spinner />` before the label with `data-icon="inline-start"` for a start position, or after the label with `data-icon="inline-end"` for an end position.
+### Centered fallback
 
-{/* <ComponentPreview styleName="base-nova" name="spinner-button" /> */}
+Use it as a simple fallback for route or section loading.
 
-### Badge
+```tsx
+import { Ring } from "@/components/ring";
 
-Add a spinner to a badge to indicate a loading state. Place the `<Spinner />` before the label with `data-icon="inline-start"` for a start position, or after the label with `data-icon="inline-end"` for an end position.
+export function LoadingSection() {
+  return (
+    <div className="flex items-center justify-center py-12">
+      <Ring className="size-6 text-muted-foreground" />
+    </div>
+  );
+}
+```
 
-{/* <ComponentPreview styleName="base-nova" name="spinner-badge" /> */}
+### Size and color
 
-### Input Group
+`Ring` inherits `currentColor`, so it responds well to utility classes.
 
-{/* <ComponentPreview styleName="base-nova" name="spinner-input-group" /> */}
+```tsx
+<Ring className="size-4 text-muted-foreground" />
+<Ring className="size-6 text-foreground" />
+<Ring className="size-8 text-primary" />
+```
 
-### Empty
+## Accessibility
 
-{/* <ComponentPreview styleName="base-nova" name="spinner-empty" /> */}
+On its own, `Ring` is purely visual. When the state is not already obvious from nearby text, pair it with accessible copy such as `Saving...`, `Loading results...`, or screen-reader-only status text.
 
-## RTL
+## Customization
 
-To enable RTL support in shadcn/ui, see the [RTL configuration guide](/docs/components).
+The component is just an animated SVG path, so customization is straightforward:
 
-{/* <ComponentPreview styleName="base-nova" name="spinner-rtl" direction="rtl" /> */}
+- change the stroke width for a heavier or lighter feel
+- slow down or replace `animate-spin`
+- wrap it in a status component with labels or motion preferences
+
+## Related
+
+- [Spokes](/docs/components/spokes) for a lighter, more segmented spinner

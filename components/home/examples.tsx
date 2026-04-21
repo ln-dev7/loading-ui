@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { Section } from "@/components/common/section";
 import { ArrowUpRight, Terminal } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/common/icons";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { getCLICommand, getRegistryItem } from "@/lib/registry";
+import { getCLICommand, getOpenInV0Url, getRegistryItem } from "@/lib/registry";
 import { Index } from "@/registry/__index__";
 import { ExamplesIndex } from "@/registry/examples/__index__";
 import { CopyButton } from "@/components/common/copy-button";
 import { RegistryItem } from "@/registry/schema";
+import { cn } from "@/lib/utils";
 
 const CopyComponent = ({ item }: { item: RegistryItem }) => {
   return (
@@ -52,13 +53,27 @@ const CopyCLICommand = ({ item }: { item: RegistryItem }) => {
 };
 
 const OpenInV0 = ({ item }: { item: RegistryItem }) => {
+  const href = getOpenInV0Url(item.name);
+
   return (
     <Tooltip>
       <TooltipTrigger
         render={
-          <Button variant="secondary" size="icon">
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label={`Open ${item.name} in v0`}
+            className={cn(
+              buttonVariants({
+                variant: "secondary",
+                size: "icon",
+              }),
+              "static",
+            )}
+          >
             <Icons.v0 className="size-4" />
-          </Button>
+          </a>
         }
       />
       <TooltipContent sideOffset={8}>Open in v0</TooltipContent>
@@ -90,7 +105,10 @@ export const Examples = async () => {
         const { name, item, ExampleComponent } = tile;
 
         return (
-          <div key={name} className="group/component relative aspect-square">
+          <div
+            key={name}
+            className="group/component relative aspect-4/3 md:aspect-square"
+          >
             <div className="absolute inset-x-0 z-10 top-0 flex items-center justify-end p-4 opacity-0 transition-opacity group-hover/component:opacity-100 pointer-coarse:opacity-100">
               <div className="flex items-center gap-1.5">
                 <CopyComponent item={item} />
@@ -104,7 +122,7 @@ export const Examples = async () => {
             >
               <ExampleComponent />
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-4">
-                <span className="text-muted-foreground group-hover/component:text-foreground truncate text-sm capitalize transition-colors">
+                <span className="text-muted-foreground group-hover/component:text-foreground truncate text-sm transition-colors">
                   {item.name}
                 </span>
 

@@ -1,4 +1,5 @@
 import { readFileFromRoot } from "@/lib/read-file";
+import { baseUrl } from "@/lib/metadata";
 import { Index } from "@/registry/__index__";
 import { ExamplesIndex } from "@/registry/examples/__index__";
 import {
@@ -218,4 +219,16 @@ export function fixImport(content: string) {
 
 export function getCLICommand(name: string) {
   return `npx shadcn add ${registry.name}/${name}`;
+}
+
+export function getRegistryItemUrl(name: string) {
+  return new URL(`/r/${name}.json`, registry.homepage).toString();
+}
+
+export function getOpenInV0Url(name: string) {
+  const url = new URL("https://v0.dev/chat/api/open");
+
+  url.searchParams.set("url", getRegistryItemUrl(name));
+
+  return url.toString();
 }

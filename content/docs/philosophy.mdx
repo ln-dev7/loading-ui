@@ -1,28 +1,48 @@
 ---
 title: Philosophy
-description: Principles behind loading-ui components and how we think about loading states.
+description: The design principles behind loading-ui and how we think about loading states in product interfaces.
 icon: Lightbulb
 ---
 
-loading-ui exists to make **loading and pending states** feel deliberate: clear, accessible, and consistent with the rest of your UI — without drowning users in spinners.
+loading-ui is opinionated about one thing: a loading state should help the user understand what is happening, not just prove that animation is possible.
 
-## Progress over ambiguity
+## Motion should explain status
 
-Prefer patterns that answer “is something happening?” at a glance: motion, placement, and copy that matches the action (submitting, saving, loading more).
+A loader is useful when it answers a question quickly:
 
-## Accessible by default
+- did my action start?
+- is this section still fetching?
+- should I wait, retry, or keep moving?
 
-Loading indicators should work with **reduced motion**, **keyboard** flows, and **screen readers** where it matters. We avoid decorative motion that communicates nothing.
+The animation itself is secondary. The job is communication.
 
-## Composable and boring (in a good way)
+## Loading states are part of the product
 
-Primitives should **compose** with your design system (tokens, typography, spacing) rather than inventing a parallel visual language. Defaults are helpful; escape hatches stay explicit.
+Pending UI is not filler between real screens. It is part of the experience users actually see while saving, searching, uploading, and navigating. That means loading states should be designed with the same care as buttons, forms, and navigation.
 
-## Documentation is part of the API
+## Small surface area, high adaptability
 
-If it isn’t documented, it isn’t stable. Examples in MDX should match how real apps wire components up — including edge cases when they’re common.
+This project stays narrow on purpose. Instead of shipping a giant library of opinionated patterns, loading-ui focuses on a handful of primitives that are easy to install, inspect, and rewrite. The goal is to reduce repeated work without locking teams into a preset brand aesthetic.
+
+## Restraint over novelty
+
+A flashy animation can be useful in a landing page. In product UI, it often becomes noise. loading-ui favors components that:
+
+- read clearly at small sizes
+- look acceptable next to existing system UI
+- can be slowed down, simplified, or restyled with minimal effort
+- do not depend on decorative motion to make sense
+
+## Open code over black boxes
+
+Every installed component becomes part of your codebase. You can tune the animation curve, swap SVG paths, adjust accessibility text, or merge a loader into a bigger component. That ownership model is a core part of the project, not a side effect.
+
+## Documentation should stay practical
+
+The docs should help you evaluate and install components fast. That means straightforward setup steps, realistic examples, and language that reflects how teams actually ship UI.
 
 ## Related
 
-- [Usage](/docs/usage) — install and integrate components.
-- [Components](/docs/components) — browse the catalog.
+- [Usage](/docs/usage) for setup and installation
+- [Components](/docs/components) for individual component pages
+- [Contributing](/docs/contributing) if you want to improve the registry
