@@ -12,6 +12,16 @@ export const components = [
     ],
   },
   {
+    name: "ripple",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/ripple.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "spokes",
     type: "registry:component",
     files: [
@@ -27,6 +37,116 @@ export const components = [
     files: [
       {
         path: "components/loading-ui/classic.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "concentric-ring",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/concentric-ring.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "orbit-ring",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/orbit-ring.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "satellite-ring",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/satellite-ring.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "clock-ring",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/clock-ring.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "quarter-ring",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/quarter-ring.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "glossy-orb",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/glossy-orb.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "comet-spinner",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/comet-spinner.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "shadow-spinner",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/shadow-spinner.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "triple-dot-spinner",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/triple-dot-spinner.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "twin-orbit",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/twin-orbit.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "wandering-eyes",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/wandering-eyes.tsx",
         type: "registry:component",
       },
     ],
@@ -82,6 +202,27 @@ export const components = [
     ],
   },
   {
+    name: "pulse-ring",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/pulse-ring.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "pulsating-dots",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/pulsating-dots.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
+  },
+  {
     name: "dots",
     type: "registry:component",
     files: [
@@ -90,6 +231,17 @@ export const components = [
         type: "registry:component",
       },
     ],
+  },
+  {
+    name: "bobbing-dots",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/bobbing-dots.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
   },
   {
     name: "bouncing-dots",
@@ -132,11 +284,42 @@ export const components = [
     ],
   },
   {
+    name: "delivery-truck",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/delivery-truck.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "polar-face",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/polar-face.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "analyzing-image",
     type: "registry:component",
     files: [
       {
         path: "components/loading-ui/analyzing-image.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
+  },
+  {
+    name: "spiral",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/spiral.tsx",
         type: "registry:component",
       },
     ],
@@ -158,6 +341,16 @@ export const components = [
     files: [
       {
         path: "components/loading-ui/terminal.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "infinity",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/infinity.tsx",
         type: "registry:component",
       },
     ],

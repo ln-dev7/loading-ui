@@ -43,6 +43,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "bobbing-dots-demo": {
+    name: "bobbing-dots-demo",
+    filePath: "registry/examples/bobbing-dots-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bobbing-dots-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bobbing-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "bouncing-dots-demo": {
     name: "bouncing-dots-demo",
     filePath: "registry/examples/bouncing-dots-demo.tsx",
@@ -66,6 +79,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "classic-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-demo": {
+    name: "clock-ring-demo",
+    filePath: "registry/examples/clock-ring-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-demo": {
+    name: "comet-spinner-demo",
+    filePath: "registry/examples/comet-spinner-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "concentric-ring-demo": {
+    name: "concentric-ring-demo",
+    filePath: "registry/examples/concentric-ring-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./concentric-ring-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "concentric-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "delivery-truck-demo": {
+    name: "delivery-truck-demo",
+    filePath: "registry/examples/delivery-truck-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./delivery-truck-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "delivery-truck-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -95,6 +160,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "glossy-orb-demo": {
+    name: "glossy-orb-demo",
+    filePath: "registry/examples/glossy-orb-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./glossy-orb-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "glossy-orb-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-demo": {
+    name: "infinity-demo",
+    filePath: "registry/examples/infinity-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "orbit-ring-demo": {
+    name: "orbit-ring-demo",
+    filePath: "registry/examples/orbit-ring-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./orbit-ring-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "orbit-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "polar-face-demo": {
+    name: "polar-face-demo",
+    filePath: "registry/examples/polar-face-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./polar-face-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "polar-face-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulsating-dots-demo": {
+    name: "pulsating-dots-demo",
+    filePath: "registry/examples/pulsating-dots-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulsating-dots-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulsating-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "pulse-demo": {
     name: "pulse-demo",
     filePath: "registry/examples/pulse-demo.tsx",
@@ -121,6 +251,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "pulse-ring-demo": {
+    name: "pulse-ring-demo",
+    filePath: "registry/examples/pulse-ring-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-ring-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "quarter-ring-demo": {
+    name: "quarter-ring-demo",
+    filePath: "registry/examples/quarter-ring-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./quarter-ring-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "quarter-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "ring-demo": {
     name: "ring-demo",
     filePath: "registry/examples/ring-demo.tsx",
@@ -134,6 +290,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "ripple-demo": {
+    name: "ripple-demo",
+    filePath: "registry/examples/ripple-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-demo": {
+    name: "satellite-ring-demo",
+    filePath: "registry/examples/satellite-ring-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "shadow-spinner-demo": {
+    name: "shadow-spinner-demo",
+    filePath: "registry/examples/shadow-spinner-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./shadow-spinner-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "shadow-spinner-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "skeleton-demo": {
     name: "skeleton-demo",
     filePath: "registry/examples/skeleton-demo.tsx",
@@ -144,6 +339,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "skeleton-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "spiral-demo": {
+    name: "spiral-demo",
+    filePath: "registry/examples/spiral-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./spiral-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "spiral-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -238,6 +446,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "triple-dot-spinner-demo": {
+    name: "triple-dot-spinner-demo",
+    filePath: "registry/examples/triple-dot-spinner-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./triple-dot-spinner-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "triple-dot-spinner-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "twin-orbit-demo": {
+    name: "twin-orbit-demo",
+    filePath: "registry/examples/twin-orbit-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./twin-orbit-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "twin-orbit-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "typing-demo": {
     name: "typing-demo",
     filePath: "registry/examples/typing-demo.tsx",
@@ -248,6 +482,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "typing-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wandering-eyes-demo": {
+    name: "wandering-eyes-demo",
+    filePath: "registry/examples/wandering-eyes-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wandering-eyes-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },

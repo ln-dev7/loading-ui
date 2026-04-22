@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "wandering-eyes",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/wandering-eyes.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\nfunction WanderingEyes({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-wandering-eyes-move {\n          0%,\n          10% {\n            background-position: 0 0;\n          }\n\n          13%,\n          40% {\n            background-position: -0.9375em 0;\n          }\n\n          43%,\n          70% {\n            background-position: 0.9375em 0;\n          }\n\n          73%,\n          90% {\n            background-position: 0 0.9375em;\n          }\n\n          93%,\n          100% {\n            background-position: 0 0;\n          }\n        }\n\n        @keyframes loading-ui-wandering-eyes-blink {\n          0%,\n          10%,\n          12%,\n          20%,\n          22%,\n          40%,\n          42%,\n          60%,\n          62%,\n          70%,\n          72%,\n          90%,\n          92%,\n          98%,\n          100% {\n            height: 3em;\n          }\n\n          11%,\n          21%,\n          41%,\n          61%,\n          71%,\n          91%,\n          99% {\n            height: 1.125em;\n          }\n        }\n      `}</style>\n      <span\n        role=\"status\"\n        className={cn(\n          \"inline-flex w-[6.75em] items-center justify-between [--eye-color:currentColor] [--pupil-color:color-mix(in_srgb,currentColor_20%,black)]\",\n          className,\n        )}\n        {...props}\n      >\n        {Array.from({ length: 2 }, (_, index) => (\n          <span\n            key={index}\n            aria-hidden=\"true\"\n            className=\"inline-block w-[3em] rounded-full\"\n            style={{\n              height: \"3em\",\n              backgroundColor: \"var(--eye-color)\",\n              backgroundImage:\n                \"radial-gradient(circle 0.875em, var(--pupil-color) 100%, transparent 0)\",\n              backgroundRepeat: \"no-repeat\",\n              animation:\n                \"loading-ui-wandering-eyes-move 10s infinite, loading-ui-wandering-eyes-blink 10s infinite\",\n            }}\n          />\n        ))}\n        <span className=\"sr-only\">Loading</span>\n      </span>\n    </>\n  );\n}\n\nexport { WanderingEyes };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

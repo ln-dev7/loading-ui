@@ -28,6 +28,30 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  ripple: {
+    name: "ripple",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/ripple.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/components/loading-ui/ripple.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   spokes: {
     name: "spokes",
     description: "",
@@ -66,6 +90,281 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/classic.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "concentric-ring": {
+    name: "concentric-ring",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/concentric-ring.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/concentric-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "orbit-ring": {
+    name: "orbit-ring",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/orbit-ring.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/orbit-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "satellite-ring": {
+    name: "satellite-ring",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/satellite-ring.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/satellite-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "clock-ring": {
+    name: "clock-ring",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/clock-ring.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/clock-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "quarter-ring": {
+    name: "quarter-ring",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/quarter-ring.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/quarter-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "glossy-orb": {
+    name: "glossy-orb",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/glossy-orb.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/glossy-orb.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "comet-spinner": {
+    name: "comet-spinner",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/comet-spinner.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/comet-spinner.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "shadow-spinner": {
+    name: "shadow-spinner",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/shadow-spinner.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/shadow-spinner.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "triple-dot-spinner": {
+    name: "triple-dot-spinner",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/triple-dot-spinner.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/triple-dot-spinner.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "twin-orbit": {
+    name: "twin-orbit",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/twin-orbit.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/twin-orbit.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "wandering-eyes": {
+    name: "wandering-eyes",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/wandering-eyes.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/wandering-eyes.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -197,6 +496,56 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "pulse-ring": {
+    name: "pulse-ring",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/pulse-ring.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/pulse-ring.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "pulsating-dots": {
+    name: "pulsating-dots",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/pulsating-dots.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/pulsating-dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   dots: {
     name: "dots",
     description: "",
@@ -211,6 +560,31 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/dots.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "bobbing-dots": {
+    name: "bobbing-dots",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/bobbing-dots.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/bobbing-dots.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -318,6 +692,56 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "delivery-truck": {
+    name: "delivery-truck",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/delivery-truck.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/delivery-truck.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "polar-face": {
+    name: "polar-face",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/polar-face.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod =
+        await import("@/registry/components/loading-ui/polar-face.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "analyzing-image": {
     name: "analyzing-image",
     description: "",
@@ -333,6 +757,30 @@ export const Index: Record<string, any> = {
     component: React.lazy(async () => {
       const mod =
         await import("@/registry/components/loading-ui/analyzing-image.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  spiral: {
+    name: "spiral",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/spiral.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/components/loading-ui/spiral.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -381,6 +829,30 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/components/loading-ui/terminal.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  infinity: {
+    name: "infinity",
+    description: "",
+    type: "registry:component",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/components/loading-ui/infinity.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/components/loading-ui/infinity.tsx");
       const exportName =
         Object.keys(mod).find(
           (key) =>
