@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -47,6 +48,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
             </TooltipProvider>
           </RootProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
