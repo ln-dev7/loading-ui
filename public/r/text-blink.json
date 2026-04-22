@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "text-blink",
+  "files": [
+    {
+      "path": "registry/components/loading-ui/text-blink.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\n\ntype TextBlinkProps = {\n  children: string;\n  as?: React.ElementType;\n  className?: string;\n  duration?: number;\n};\n\nfunction TextBlink({\n  children,\n  as: Component = \"p\",\n  className,\n  duration = 2,\n}: TextBlinkProps) {\n  return (\n    <>\n      <style>{`\n        @keyframes loading-ui-text-blink {\n          0%,\n          100% {\n            opacity: 1;\n          }\n\n          50% {\n            opacity: 0.45;\n          }\n        }\n      `}</style>\n      <Component\n        className={cn(\"inline-block font-medium\", className)}\n        style={{\n          animation: `loading-ui-text-blink ${duration}s ease-in-out infinite`,\n        }}\n      >\n        {children}\n      </Component>\n    </>\n  );\n}\n\nexport { TextBlink };\n",
+      "type": "registry:component",
+      "target": ""
+    }
+  ],
+  "type": "registry:component"
+}

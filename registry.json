@@ -89,10 +89,76 @@
       "type": "registry:component"
     },
     {
+      "name": "pulse",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/pulse.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "pulse-dot",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/pulse-dot.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "dots",
       "files": [
         {
           "path": "registry/components/loading-ui/dots.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "bouncing-dots",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/bouncing-dots.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "typing",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/typing.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "wave",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/wave.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "bars",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/bars.tsx",
           "type": "registry:component",
           "target": ""
         }
@@ -123,11 +189,44 @@
       "type": "registry:component"
     },
     {
+      "name": "terminal",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/terminal.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
       "name": "text-shimmer",
       "dependencies": ["motion"],
       "files": [
         {
           "path": "registry/components/loading-ui/text-shimmer.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "text-blink",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/text-blink.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "text-dots",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/text-dots.tsx",
           "type": "registry:component",
           "target": ""
         }

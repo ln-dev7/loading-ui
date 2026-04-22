@@ -30,6 +30,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "bars-demo": {
+    name: "bars-demo",
+    filePath: "registry/examples/bars-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-demo": {
+    name: "bouncing-dots-demo",
+    filePath: "registry/examples/bouncing-dots-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "classic-demo": {
     name: "classic-demo",
     filePath: "registry/examples/classic-demo.tsx",
@@ -66,6 +92,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "dual-arc-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-demo": {
+    name: "pulse-demo",
+    filePath: "registry/examples/pulse-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-dot-demo": {
+    name: "pulse-dot-demo",
+    filePath: "registry/examples/pulse-dot-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -121,6 +173,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "terminal-demo": {
+    name: "terminal-demo",
+    filePath: "registry/examples/terminal-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./terminal-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "terminal-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-blink-demo": {
+    name: "text-blink-demo",
+    filePath: "registry/examples/text-blink-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-blink-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-blink-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "text-dots-demo": {
+    name: "text-dots-demo",
+    filePath: "registry/examples/text-dots-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./text-dots-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "text-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "text-shimmer-demo": {
     name: "text-shimmer-demo",
     filePath: "registry/examples/text-shimmer-demo.tsx",
@@ -144,6 +235,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "text-shimmer-wave-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-demo": {
+    name: "typing-demo",
+    filePath: "registry/examples/typing-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wave-demo": {
+    name: "wave-demo",
+    filePath: "registry/examples/wave-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-demo";
       return { default: mod.default || mod[exportName] };
     }),
   },
