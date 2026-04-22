@@ -1,5 +1,5 @@
 {
-  "name": "loading-ui",
+  "name": "@loading-ui",
   "homepage": "https://loading-ui.com",
   "items": [
     {
@@ -26,42 +26,114 @@
       "name": "ring",
       "files": [
         {
-          "path": "registry/ui/ring.tsx",
-          "type": "registry:ui"
+          "path": "registry/components/loading-ui/ring.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
     },
     {
       "name": "spokes",
       "files": [
         {
-          "path": "registry/ui/spokes.tsx",
-          "type": "registry:ui"
+          "path": "registry/components/loading-ui/spokes.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
     },
     {
       "name": "classic",
       "files": [
         {
-          "path": "registry/ui/classic.tsx",
-          "type": "registry:ui"
+          "path": "registry/components/loading-ui/classic.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
     },
     {
       "name": "analyzing-image",
       "dependencies": ["motion"],
       "files": [
         {
-          "path": "registry/ui/analyzing-image.tsx",
-          "type": "registry:ui"
+          "path": "registry/components/loading-ui/analyzing-image.tsx",
+          "type": "registry:component",
+          "target": ""
         }
       ],
-      "type": "registry:ui"
+      "type": "registry:component"
+    },
+    {
+      "name": "skeleton",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/skeleton.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "swirling",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/swirling.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "arc",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/arc.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "dual-arc",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/dual-arc.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "text-shimmer",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/text-shimmer.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "text-shimmer-wave",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/text-shimmer-wave.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
     },
     {
       "name": "utils",
@@ -69,7 +141,8 @@
       "files": [
         {
           "path": "registry/lib/utils.ts",
-          "type": "registry:lib"
+          "type": "registry:lib",
+          "target": ""
         }
       ],
       "type": "registry:lib"

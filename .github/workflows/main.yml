@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
       - uses: ./.github/setup
 
-      - run: bun lint
+      - run: bun run lint
 
   format:
     runs-on: ubuntu-latest

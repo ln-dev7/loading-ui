@@ -1,43 +1,65 @@
 ---
 title: Contributing
-description: How to report issues, open pull requests, and help improve loading-ui.
+description: How to improve loading-ui, from documentation tweaks to new registry components.
 icon: GitPullRequest
 ---
 
-Thank you for considering a contribution. Small fixes and documentation improvements are as welcome as larger features.
+loading-ui is intentionally small, which makes contribution scope easier to reason about. Good contributions usually improve one of three things:
 
-## Before you start
+- the quality of an existing component
+- the clarity of the docs
+- the consistency of the registry and examples
 
-- Check existing **issues** and **pull requests** to avoid duplicating work.
-- For non-trivial changes, open an issue first so maintainers can agree on direction.
+## Before opening a pull request
+
+- Check for an existing issue or open PR covering the same problem.
+- For larger additions, align on direction first instead of building in isolation.
+- Keep proposals narrow. Small, reviewable changes move faster here than broad rewrites.
 
 ## Local development
 
-From the repository root, install dependencies and run the docs app:
+Install dependencies and run the site locally:
 
 ```bash
 bun install
 bun run dev
 ```
 
-Run checks before you submit:
+If you change registry items, rebuild the generated registry artifacts:
 
 ```bash
-bun run types:check
-bun run lint
+bun run build:registry
 ```
 
-## Pull requests
+## What to update
 
-- **One logical change per PR** when possible — easier to review and revert.
-- **Describe the why** in the PR body, not only the what.
-- **Update docs** if you change public behavior or add props.
-- Follow existing **style and patterns** in the codebase (formatting, imports, component APIs).
+Changes should stay coherent across the repo:
 
-## Documentation
+- component updates should include docs where public behavior changes
+- docs examples should reflect real install and usage paths
+- generated registry output should be rebuilt when source registry items change
 
-Docs live under `content/docs`. When you add or change a component, update the relevant MDX page and any meta or navigation files your project uses.
+## Component contributions
 
-## Licensing
+The bar for a new loading component is higher than "looks nice in isolation". It should also be:
 
-By contributing, you agree that your contributions are licensed under the same license as the project.
+- easy to understand at a glance
+- reusable across real product states
+- straightforward to customize after installation
+- compatible with the existing registry structure
+
+If a component is highly specific, it may belong in an app codebase or example gallery instead of the main registry.
+
+## Documentation contributions
+
+Docs live in `content/docs`. Prioritize clear setup steps, honest tradeoffs, and examples that match the actual repository structure. If the docs imply a workflow the repo does not support, fix the docs or the workflow so they agree.
+
+## Pull request notes
+
+When you open a PR, explain:
+
+- what problem it solves
+- why this approach fits the project
+- whether docs or generated files were updated
+
+That context matters more than a long edit summary.

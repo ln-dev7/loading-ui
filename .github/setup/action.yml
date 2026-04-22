@@ -1,7 +1,7 @@
 name: Setup
 description: Composite action that sets up bun and installs dependencies
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - uses: actions/setup-node@v4
       with:
@@ -11,5 +11,5 @@ runs:
       with:
         bun-version: latest
 
-    - run: bun install
+    - run: bun install --frozen-lockfile
       shell: bash

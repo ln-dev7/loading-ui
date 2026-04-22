@@ -16,6 +16,7 @@ export const GitHub = ({
       {...props}
     >
       <Icons.gitHub className="size-4" />
+      <span className="sr-only">GitHub</span>
     </a>
   );
 };

@@ -38,7 +38,12 @@ export const Installer = ({ command, className = "w-48" }: InstallerProps) => {
           $
         </InputGroupText>
       </InputGroupAddon>
-      <InputGroupInput className={className} readOnly value={command} />
+      <InputGroupInput
+        aria-label="Install command"
+        className={className}
+        readOnly
+        value={command}
+      />
       <InputGroupAddon align="inline-end">
         <InputGroupButton
           aria-label="Copy"

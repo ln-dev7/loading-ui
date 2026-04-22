@@ -1,6 +1,6 @@
 name: "Bug report"
 description: Report an issue
-title: "[Bug]: "
+title: "[bug]: "
 labels: ["bug"]
 body:
   - type: markdown
@@ -11,15 +11,23 @@ body:
   - type: markdown
     attributes:
       value: |
-        #### If you aren't sure this is a bug or not, please open a discussion instead:
-        - [Discussions](https://github.com/turbostarter/loading-ui/discussions/new?category=general)
+        #### If you are asking for help or want to share an idea, please use the community links instead of opening a bug report.
 
   - type: textarea
     id: bug-description
     attributes:
       label: Describe the bug
-      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us how in the description. Thanks!
+      description: A clear and concise description of the bug. If you plan to open a PR, mention that here.
       placeholder: Bug description
+    validations:
+      required: true
+
+  - type: input
+    id: affected-components
+    attributes:
+      label: Affected component/components
+      description: Which loading component, example, or page is affected?
+      placeholder: ex. ring, spokes, installer, docs preview
     validations:
       required: true
 
@@ -35,19 +43,39 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: reproduction-link
+    attributes:
+      label: Reproduction link
+      description: Link to a minimal reproduction in StackBlitz, CodeSandbox, or a public GitHub repository, if available.
+      placeholder: https://stackblitz.com/...
+    validations:
+      required: false
+
   - type: textarea
     id: logs
     attributes:
-      label: Logs
-      description: "Please include browser console and dev server logs around the time this bug occurred. Optional if you provided a clear reproduction. Prefer plain text over screenshots."
+      label: Logs or error output
+      description: "Include browser console output, terminal logs, or stack traces. Prefer plain text over screenshots."
       render: bash
 
   - type: textarea
     id: system-info
     attributes:
       label: System Info
-      description: Information about browsers, system or binaries that's relevant.
+      description: Information about your browser, OS, Bun/Node version, and anything else relevant.
       render: bash
-      placeholder: System, Binaries, Browsers
+      placeholder: OS, browser, Bun, Node, package manager
     validations:
       required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before submitting
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/turbostarter/loading-ui/blob/main/.github/CONTRIBUTING.md).
+      options:
+        - label: I searched existing issues and pull requests
+          required: true
+        - label: I included enough detail for someone else to reproduce the problem
+          required: true

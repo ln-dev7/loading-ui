@@ -16,7 +16,7 @@ export function CodeCollapsibleWrapper({
   children,
   ...props
 }: React.ComponentProps<typeof Collapsible>) {
-  const [isOpened, setIsOpened] = React.useState(true);
+  const [isOpened, setIsOpened] = React.useState(false);
 
   return (
     <Collapsible
@@ -26,6 +26,7 @@ export function CodeCollapsibleWrapper({
       {...props}
     >
       <CollapsibleTrigger
+        nativeButton={false}
         render={
           <div className="absolute top-1.5 right-9 z-10 flex items-center">
             <Button
@@ -41,7 +42,8 @@ export function CodeCollapsibleWrapper({
       />
       <CollapsibleContent
         keepMounted
-        className="relative mt-6 overflow-hidden data-closed:max-h-64 data-closed:[content-visibility:auto] [[hidden]]:block [&>figure]:mt-0 [&>figure]:md:mx-0!"
+        hidden={false}
+        className="relative mt-6 overflow-hidden data-closed:max-h-64 data-closed:[content-visibility:auto] [[hidden]]:block! [&>figure]:mt-0 [&>figure]:md:mx-0!"
       >
         {children}
       </CollapsibleContent>
