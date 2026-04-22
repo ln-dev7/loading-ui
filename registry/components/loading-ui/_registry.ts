@@ -32,27 +32,6 @@ export const components = [
     ],
   },
   {
-    name: "analyzing-image",
-    type: "registry:component",
-    files: [
-      {
-        path: "components/loading-ui/analyzing-image.tsx",
-        type: "registry:component",
-      },
-    ],
-    dependencies: ["motion"],
-  },
-  {
-    name: "skeleton",
-    type: "registry:component",
-    files: [
-      {
-        path: "components/loading-ui/skeleton.tsx",
-        type: "registry:component",
-      },
-    ],
-  },
-  {
     name: "swirling",
     type: "registry:component",
     files: [
@@ -78,6 +57,37 @@ export const components = [
     files: [
       {
         path: "components/loading-ui/dual-arc.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "dots",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/dots.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "analyzing-image",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/analyzing-image.tsx",
+        type: "registry:component",
+      },
+    ],
+    dependencies: ["motion"],
+  },
+  {
+    name: "skeleton",
+    type: "registry:component",
+    files: [
+      {
+        path: "components/loading-ui/skeleton.tsx",
         type: "registry:component",
       },
     ],

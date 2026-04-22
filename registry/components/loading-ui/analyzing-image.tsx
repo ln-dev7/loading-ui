@@ -17,10 +17,7 @@ const transition: Transition = {
 
 function AnalyzingImage({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div
-      className={cn("relative isolate size-5 shrink-0", className)}
-      {...props}
-    >
+    <div className={cn("relative isolate shrink-0", className)} {...props}>
       <motion.div
         initial={{
           clipPath: "inset(0% 0% 0% 0%)",

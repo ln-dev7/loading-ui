@@ -14,12 +14,10 @@ export const Hero = () => {
           loading state
         </h1>
 
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-muted-foreground lg:text-lg xl:text-xl 2xl:text-2xl">
-            A curated collection of spinners, loaders and animations for your
-            next project. Free and open source, forever.
-          </p>
-        </div>
+        <p className="text-muted-foreground lg:text-lg xl:text-xl 2xl:text-2xl mx-auto max-w-2xl text-center">
+          A curated collection of spinners, loaders and animations for your next
+          project. Free and open source, forever.
+        </p>
 
         <div className="mx-auto inline-flex w-fit flex-wrap items-center gap-3">
           <Installer

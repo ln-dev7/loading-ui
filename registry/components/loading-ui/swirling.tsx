@@ -1,8 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-
-function Swirling({ className, ...props }: React.ComponentProps<"svg">) {
+function Swirling(props: React.ComponentProps<"svg">) {
   return (
     <>
       <style>{`
@@ -34,12 +32,7 @@ function Swirling({ className, ...props }: React.ComponentProps<"svg">) {
             loading-ui-swirling-spin 2s linear infinite;
         }
       `}</style>
-      <svg
-        viewBox="0 0 800 800"
-        xmlns="http://www.w3.org/2000/svg"
-        className={cn("text-primary size-14", className)}
-        {...props}
-      >
+      <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" {...props}>
         <circle
           className="loading-ui-swirling-circle"
           cx="400"

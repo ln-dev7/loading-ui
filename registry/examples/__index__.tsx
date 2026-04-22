@@ -30,6 +30,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "classic-demo": {
+    name: "classic-demo",
+    filePath: "registry/examples/classic-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./classic-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "dots-demo": {
+    name: "dots-demo",
+    filePath: "registry/examples/dots-demo.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./dots-demo.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "dual-arc-demo": {
     name: "dual-arc-demo",
     filePath: "registry/examples/dual-arc-demo.tsx",

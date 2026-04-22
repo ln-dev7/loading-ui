@@ -56,29 +56,6 @@
       "type": "registry:component"
     },
     {
-      "name": "analyzing-image",
-      "dependencies": ["motion"],
-      "files": [
-        {
-          "path": "registry/components/loading-ui/analyzing-image.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
-      "name": "skeleton",
-      "files": [
-        {
-          "path": "registry/components/loading-ui/skeleton.tsx",
-          "type": "registry:component",
-          "target": ""
-        }
-      ],
-      "type": "registry:component"
-    },
-    {
       "name": "swirling",
       "files": [
         {
@@ -105,6 +82,40 @@
       "files": [
         {
           "path": "registry/components/loading-ui/dual-arc.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "dots",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/dots.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "analyzing-image",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "registry/components/loading-ui/analyzing-image.tsx",
+          "type": "registry:component",
+          "target": ""
+        }
+      ],
+      "type": "registry:component"
+    },
+    {
+      "name": "skeleton",
+      "files": [
+        {
+          "path": "registry/components/loading-ui/skeleton.tsx",
           "type": "registry:component",
           "target": ""
         }

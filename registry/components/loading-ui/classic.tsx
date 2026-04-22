@@ -1,48 +1,45 @@
 import { cn } from "@/lib/utils";
 
-function Classic({
-  className,
-  size = "md",
-}: {
-  className?: string;
-  size?: "sm" | "md" | "lg";
-}) {
-  const sizeClasses = {
-    sm: "size-4",
-    md: "size-5",
-    lg: "size-6",
-  };
+type ClassicProps = Omit<React.ComponentProps<"span">, "children">;
 
-  const barSizes = {
-    sm: { height: "6px", width: "1.5px" },
-    md: { height: "8px", width: "2px" },
-    lg: { height: "10px", width: "2.5px" },
-  };
-
+function Classic({ className, ...props }: ClassicProps) {
   return (
-    <div className={cn("relative", sizeClasses[size], className)}>
-      <div className="absolute h-full w-full">
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className="bg-primary absolute animate-[spinner-fade_1.2s_linear_infinite] rounded-full"
-            style={{
-              top: "0",
-              left: "50%",
-              marginLeft:
-                size === "sm" ? "-0.75px" : size === "lg" ? "-1.25px" : "-1px",
-              transformOrigin: `${size === "sm" ? "0.75px" : size === "lg" ? "1.25px" : "1px"} ${size === "sm" ? "10px" : size === "lg" ? "14px" : "12px"}`,
-              transform: `rotate(${i * 30}deg)`,
-              opacity: 0,
-              animationDelay: `${i * 0.1}s`,
-              height: barSizes[size].height,
-              width: barSizes[size].width,
-            }}
-          />
-        ))}
-      </div>
-      <span className="sr-only">Loading</span>
-    </div>
+    <>
+      <style>{`
+        @keyframes loading-ui-classic-fade {
+          0% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0.15;
+          }
+        }
+      `}</style>
+      <span
+        role="status"
+        className={cn("text-primary inline-block box-border size-5", className)}
+        {...props}
+      >
+        <span
+          aria-hidden="true"
+          className="relative top-1/2 left-1/2 block size-full"
+        >
+          {Array.from({ length: 12 }, (_, index) => (
+            <span
+              key={index}
+              className="bg-current absolute top-[-3.9%] left-[-10%] block h-[8%] w-[24%] rounded-(--radius)"
+              style={{
+                transform: `rotate(${index * 30}deg) translate(146%)`,
+                animation: "loading-ui-classic-fade 1.2s linear infinite",
+                animationDelay: `${-1.2 + index * 0.1}s`,
+              }}
+            />
+          ))}
+        </span>
+        <span className="sr-only">Loading</span>
+      </span>
+    </>
   );
 }
 
