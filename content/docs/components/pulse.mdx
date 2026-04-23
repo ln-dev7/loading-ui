@@ -1,6 +1,104 @@
 ---
 title: Pulse
-description: A pulsing shape for soft, attention-grabbing loading feedback.
+description: A soft scaling ring for calm, breathable loading and standby states.
 ---
 
-Coming soon.
+<ComponentPreview name="pulse-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/pulse
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pulse" title="components/loading-ui/pulse.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Pulse } from "@/components/loading-ui/pulse";
+```
+
+```tsx
+<Pulse />
+```
+
+## Customization
+
+`Pulse` animates a bordered ring with gentle scale and opacity breathing. It is deliberately **low urgency**—use it when you want presence without implying a hard error or precise percent complete.
+
+### Size
+
+Match the ring to icons, badges, and list rows with `size-*` utilities on the outer span.
+
+<ComponentPreview name="pulse-size" />
+
+### Color
+
+The ring uses `border-current`, so semantic `text-*` utilities tint the stroke predictably.
+
+<ComponentPreview name="pulse-color" />
+
+### Ring weight
+
+Target the animated ring with a child selector if you need a lighter or heavier stroke.
+
+<ComponentPreview name="pulse-ring-weight" />
+
+### Duration
+
+Breathing speed follows `--tw-animation-duration` (for example via `animation-duration-*` utilities).
+
+<ComponentPreview name="pulse-duration" />
+
+## Examples
+
+These examples emphasize **soft holds**: warm cache, idle polish, and tooltips that explain a temporary state.
+
+### Button
+
+Keeps pending actions feeling patient next to firmer spinners elsewhere in the app.
+
+<ComponentPreview name="pulse-button" />
+
+### Badge
+
+Works well for “standby” or “degraded but OK” badges where a full spinner would feel loud.
+
+<ComponentPreview name="pulse-badge" />
+
+### Collapsible
+
+A dashed shell and muted copy reinforce that the section is optional context, not a blocker.
+
+<ComponentPreview name="pulse-collapsible" />
+
+### Tooltip
+
+Short explanations plus a subtle pulse signal backoff or partial health without opening a dialog.
+
+<ComponentPreview name="pulse-tooltip" />

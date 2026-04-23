@@ -1,6 +1,107 @@
 ---
 title: Comet spinner
-description: A rotating comet-style spinner with a bright head and trailing tail.
+description: A rotating comet with a bright head and sweeping tail—great for energetic throughput states.
 ---
 
-Coming soon.
+<ComponentPreview name="comet-spinner-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/comet-spinner
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="comet-spinner"
+  title="components/loading-ui/comet-spinner.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { CometSpinner } from "@/components/loading-ui/comet-spinner";
+```
+
+```tsx
+<CometSpinner />
+```
+
+## Customization
+
+`CometSpinner` is built from layered `box-shadow` motion plus rotation, wrapped in a container query box so orbit math scales with `size-*`. Color comes from `currentColor`, and timing is driven by the **`duration`** prop (mapped to `--loading-ui-comet-duration`) rather than Tailwind’s `animation-duration` utilities.
+
+### Size
+
+The spinner is `aspect-square`; grow or shrink it with `size-*` depending on the density of the surrounding layout.
+
+<ComponentPreview name="comet-spinner-size" />
+
+### Color
+
+Set hue with text utilities—the head and tail inherit through the foreground color.
+
+<ComponentPreview name="comet-spinner-color" />
+
+### Duration
+
+Pass `duration` as a CSS time string (for example `"1.7s"`) or a number of milliseconds. The same value paces both the tail morph and the rotation.
+
+<ComponentPreview name="comet-spinner-duration" />
+
+### Geometry
+
+`headScale` and `radiusScale` are clamped helpers that reshape the comet: smaller heads feel sharper, larger radii widen the sweep.
+
+<ComponentPreview name="comet-spinner-geometry" />
+
+## Examples
+
+These examples lean into **burst, upload, and fast-lane** stories where the motion should feel directional.
+
+### Button
+
+Compact `size-*` on the icon slot keeps the comet legible beside label text.
+
+<ComponentPreview name="comet-spinner-button" />
+
+### Badge
+
+In chips, a smaller comet still reads as motion without stealing focus from the label.
+
+<ComponentPreview name="comet-spinner-badge" />
+
+### Alert
+
+Pair the comet with a strong headline when the event is positive or neutral but still in flight.
+
+<ComponentPreview name="comet-spinner-alert" />
+
+### Tabs
+
+Use tabs when only one surface is “burning hot” while the rest of the page stays cool and interactive.
+
+<ComponentPreview name="comet-spinner-tabs" />

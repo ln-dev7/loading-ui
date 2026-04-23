@@ -355,6 +355,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "comet-spinner-alert": {
+    name: "comet-spinner-alert",
+    filePath: "registry/examples/comet-spinner/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-badge": {
+    name: "comet-spinner-badge",
+    filePath: "registry/examples/comet-spinner/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-button": {
+    name: "comet-spinner-button",
+    filePath: "registry/examples/comet-spinner/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-color": {
+    name: "comet-spinner-color",
+    filePath: "registry/examples/comet-spinner/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "comet-spinner-demo": {
     name: "comet-spinner-demo",
     filePath: "registry/examples/comet-spinner/demo.tsx",
@@ -365,6 +417,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "comet-spinner-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-duration": {
+    name: "comet-spinner-duration",
+    filePath: "registry/examples/comet-spinner/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-geometry": {
+    name: "comet-spinner-geometry",
+    filePath: "registry/examples/comet-spinner/geometry.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/geometry.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-geometry";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-size": {
+    name: "comet-spinner-size",
+    filePath: "registry/examples/comet-spinner/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "comet-spinner-tabs": {
+    name: "comet-spinner-tabs",
+    filePath: "registry/examples/comet-spinner/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./comet-spinner/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "comet-spinner-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -1005,6 +1109,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "pulse-badge": {
+    name: "pulse-badge",
+    filePath: "registry/examples/pulse/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-button": {
+    name: "pulse-button",
+    filePath: "registry/examples/pulse/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-collapsible": {
+    name: "pulse-collapsible",
+    filePath: "registry/examples/pulse/collapsible.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/collapsible.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-collapsible";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-color": {
+    name: "pulse-color",
+    filePath: "registry/examples/pulse/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "pulse-demo": {
     name: "pulse-demo",
     filePath: "registry/examples/pulse/demo.tsx",
@@ -1015,6 +1171,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "pulse-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-duration": {
+    name: "pulse-duration",
+    filePath: "registry/examples/pulse/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-ring-weight": {
+    name: "pulse-ring-weight",
+    filePath: "registry/examples/pulse/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-size": {
+    name: "pulse-size",
+    filePath: "registry/examples/pulse/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-tooltip": {
+    name: "pulse-tooltip",
+    filePath: "registry/examples/pulse/tooltip.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse/tooltip.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-tooltip";
       return { default: mod.default || mod[exportName] };
     }),
   },

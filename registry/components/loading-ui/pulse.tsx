@@ -19,14 +19,15 @@ function Pulse({ className, ...props }: React.ComponentProps<"span">) {
       `}</style>
       <span
         role="status"
-        className={cn("relative inline-block", className)}
+        className={cn("relative inline-block shrink-0", className)}
         {...props}
       >
         <span
           aria-hidden="true"
           className="absolute inset-0 rounded-full border-2 border-current"
           style={{
-            animation: "loading-ui-thin-pulse 1.5s ease-in-out infinite",
+            animation:
+              "loading-ui-thin-pulse var(--tw-animation-duration, 1.5s) ease-in-out infinite",
           }}
         />
         <span className="sr-only">Loading</span>
