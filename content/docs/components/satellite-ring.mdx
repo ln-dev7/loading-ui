@@ -1,6 +1,107 @@
 ---
 title: Satellite ring
-description: A ring with satellite elements orbiting a center point.
+description: A ring with a satellite dot that orbits the edge for propagation-style loading states.
 ---
 
-Coming soon.
+<ComponentPreview name="satellite-ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/satellite-ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="satellite-ring"
+  title="components/loading-ui/satellite-ring.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { SatelliteRing } from "@/components/loading-ui/satellite-ring";
+```
+
+```tsx
+<SatelliteRing />
+```
+
+## Customization
+
+`SatelliteRing` reads like a small body in orbit: a muted guide ring and a solid dot that travels the perimeter. It shines when the story is fan-out, replication, or “almost there” propagation rather than a generic busy spinner.
+
+### Size
+
+Use `size-*` to balance the loader against labels, chips, and surrounding padding.
+
+<ComponentPreview name="satellite-ring-size" />
+
+### Color
+
+The guide ring and satellite both follow `currentColor`, so you can inherit from parents or set hue with text utilities.
+
+<ComponentPreview name="satellite-ring-color" />
+
+### Ring weight
+
+Thicker borders make the orbit feel more mechanical; thinner borders stay lighter in dense UIs.
+
+<ComponentPreview name="satellite-ring-ring-weight" />
+
+### Duration
+
+Tune `--tw-animation-duration` (for example with `animation-duration-*` utilities) to match calm background work versus a more urgent cadence.
+
+<ComponentPreview name="satellite-ring-duration" />
+
+## Examples
+
+These examples lean into **spread and status** narratives: rollouts, mesh relays, and badges that should feel like live systems rather than static chrome.
+
+### Button
+
+In buttons, the satellite gives a clear “work is moving through the fleet” cue without extra illustration.
+
+<ComponentPreview name="satellite-ring-button" />
+
+### Badge
+
+Compact pills stay legible because the motion stays tight to the ring.
+
+<ComponentPreview name="satellite-ring-badge" />
+
+### Accordion
+
+Inside an accordion, the loader can headline a section that is still converging while the rest of the checklist stays scannable.
+
+<ComponentPreview name="satellite-ring-accordion" />
+
+### Sheet
+
+A sheet is a good fit when the detail pane should explain *why* propagation is still running.
+
+<ComponentPreview name="satellite-ring-sheet" />

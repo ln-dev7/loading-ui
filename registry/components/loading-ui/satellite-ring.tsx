@@ -21,7 +21,8 @@ function SatelliteRing({ className, ...props }: React.ComponentProps<"span">) {
           className,
         )}
         style={{
-          animation: "loading-ui-satellite-ring-rotation 1.5s linear infinite",
+          animation:
+            "loading-ui-satellite-ring-rotation var(--tw-animation-duration, 1.5s) linear infinite",
         }}
         {...props}
       >

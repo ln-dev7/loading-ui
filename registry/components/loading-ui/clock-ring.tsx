@@ -21,7 +21,8 @@ function ClockRing({ className, ...props }: React.ComponentProps<"span">) {
           className,
         )}
         style={{
-          animation: "loading-ui-clock-ring-rotation 1.5s linear infinite",
+          animation:
+            "loading-ui-clock-ring-rotation var(--tw-animation-duration, 1.5s) linear infinite",
         }}
         {...props}
       >

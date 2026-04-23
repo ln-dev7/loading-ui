@@ -238,6 +238,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "clock-ring-alert": {
+    name: "clock-ring-alert",
+    filePath: "registry/examples/clock-ring/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-button": {
+    name: "clock-ring-button",
+    filePath: "registry/examples/clock-ring/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-color": {
+    name: "clock-ring-color",
+    filePath: "registry/examples/clock-ring/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "clock-ring-demo": {
     name: "clock-ring-demo",
     filePath: "registry/examples/clock-ring/demo.tsx",
@@ -248,6 +287,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "clock-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-duration": {
+    name: "clock-ring-duration",
+    filePath: "registry/examples/clock-ring/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-input-group": {
+    name: "clock-ring-input-group",
+    filePath: "registry/examples/clock-ring/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-popover": {
+    name: "clock-ring-popover",
+    filePath: "registry/examples/clock-ring/popover.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-popover";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-ring-weight": {
+    name: "clock-ring-ring-weight",
+    filePath: "registry/examples/clock-ring/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "clock-ring-size": {
+    name: "clock-ring-size",
+    filePath: "registry/examples/clock-ring/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./clock-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "clock-ring-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -979,6 +1083,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "satellite-ring-accordion": {
+    name: "satellite-ring-accordion",
+    filePath: "registry/examples/satellite-ring/accordion.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/accordion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-accordion";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-badge": {
+    name: "satellite-ring-badge",
+    filePath: "registry/examples/satellite-ring/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-button": {
+    name: "satellite-ring-button",
+    filePath: "registry/examples/satellite-ring/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-color": {
+    name: "satellite-ring-color",
+    filePath: "registry/examples/satellite-ring/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "satellite-ring-demo": {
     name: "satellite-ring-demo",
     filePath: "registry/examples/satellite-ring/demo.tsx",
@@ -989,6 +1145,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "satellite-ring-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-duration": {
+    name: "satellite-ring-duration",
+    filePath: "registry/examples/satellite-ring/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-ring-weight": {
+    name: "satellite-ring-ring-weight",
+    filePath: "registry/examples/satellite-ring/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-sheet": {
+    name: "satellite-ring-sheet",
+    filePath: "registry/examples/satellite-ring/sheet.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-sheet";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "satellite-ring-size": {
+    name: "satellite-ring-size",
+    filePath: "registry/examples/satellite-ring/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./satellite-ring/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "satellite-ring-size";
       return { default: mod.default || mod[exportName] };
     }),
   },

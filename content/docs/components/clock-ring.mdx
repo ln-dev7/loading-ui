@@ -1,6 +1,104 @@
 ---
 title: Clock ring
-description: A clock-inspired ring animation for time-sensitive or wait states.
+description: A clock-hand style ring for scheduling, sync, and time-bound wait states.
 ---
 
-Coming soon.
+<ComponentPreview name="clock-ring-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/clock-ring
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="clock-ring" title="components/loading-ui/clock-ring.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { ClockRing } from "@/components/loading-ui/clock-ring";
+```
+
+```tsx
+<ClockRing />
+```
+
+## Customization
+
+`ClockRing` keeps a full-strength guide ring with a single radial “hand,” so it naturally reads as **time, calendars, and scheduling** more than generic activity. Keep copy and placement aligned with that metaphor and it will feel intentional.
+
+### Size
+
+Match scale to the control or banner it sits beside so the hand stays visually balanced.
+
+<ComponentPreview name="clock-ring-size" />
+
+### Color
+
+Pair semantic hues (for example warm tones for calendar sync) with theme-aware `dark:` variants when you need extra clarity.
+
+<ComponentPreview name="clock-ring-color" />
+
+### Ring weight
+
+A heavier ring feels more like instrumentation; a lighter ring stays polite in forms and tables.
+
+<ComponentPreview name="clock-ring-ring-weight" />
+
+### Duration
+
+Slower rotations feel like background reconciliation; faster reads as a more immediate hold.
+
+<ComponentPreview name="clock-ring-duration" />
+
+## Examples
+
+These examples emphasize **timelines and inputs**: alerts about sync lag, fields that resolve time zones, and lightweight popovers for maintenance context.
+
+### Button
+
+Use it when the action is explicitly waiting on a scheduler or clock-driven backend.
+
+<ComponentPreview name="clock-ring-button" />
+
+### Alert
+
+A dashed alert frame and warm accent color reinforce that the delay is temporal, not a hard failure.
+
+<ComponentPreview name="clock-ring-alert" />
+
+### Input group
+
+Localize feedback to the control when only one column is still resolving.
+
+<ComponentPreview name="clock-ring-input-group" />
+
+### Popover
+
+Popover content is ideal for short policy copy where the loader anchors a paragraph of explanation.
+
+<ComponentPreview name="clock-ring-popover" />
