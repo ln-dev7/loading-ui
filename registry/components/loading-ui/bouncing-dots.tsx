@@ -32,7 +32,8 @@ function BouncingDots({
             aria-hidden="true"
             className="inline-block aspect-square grow rounded-full bg-current"
             style={{
-              animation: "loading-ui-bouncing-dots 1.4s ease-in-out infinite",
+              animation:
+                "loading-ui-bouncing-dots var(--tw-animation-duration, 1.4s) ease-in-out infinite",
               animationDelay: `${index * 0.2}s`,
             }}
           />

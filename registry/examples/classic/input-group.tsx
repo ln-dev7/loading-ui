@@ -13,14 +13,14 @@ export default function ClassicInputGroup() {
       <InputGroup>
         <InputGroupInput placeholder="Workspace name" disabled />
         <InputGroupAddon align="inline-end">
-          <Classic className="size-4 text-muted-foreground" />
+          <Classic className="size-4" />
           Validating...
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
         <InputGroupTextarea placeholder="Write a reply..." disabled />
         <InputGroupAddon align="block-end">
-          <Classic className="size-4 text-muted-foreground" />
+          <Classic className="size-4" />
           Generating suggestions...
           <InputGroupButton className="ml-auto" variant="default">
             Send

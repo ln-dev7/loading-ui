@@ -25,7 +25,7 @@ export default function BobbingDotsPopover() {
             </PopoverDescription>
           </PopoverHeader>
           <div className="flex items-center justify-center py-3">
-            <BobbingDots className="text-[#db2777] w-12" dots={3} />
+            <BobbingDots className="w-12" dots={3} />
           </div>
         </PopoverContent>
       </Popover>

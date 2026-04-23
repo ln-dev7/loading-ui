@@ -13,9 +13,7 @@ export default function SatelliteRingSheet() {
   return (
     <div className="flex justify-center">
       <Sheet>
-        <SheetTrigger
-          render={<Button variant="outline" size="sm" />}
-        >
+        <SheetTrigger render={<Button variant="outline" size="sm" />}>
           Open mesh status
         </SheetTrigger>
         <SheetContent className="gap-0" showCloseButton>
@@ -27,7 +25,7 @@ export default function SatelliteRingSheet() {
           </SheetHeader>
           <div className="flex flex-1 flex-col gap-4 p-4">
             <div className="bg-muted/40 flex items-start gap-3 rounded-lg border p-4">
-              <SatelliteRing className="mt-0.5 size-5 shrink-0 text-primary" />
+              <SatelliteRing className="mt-0.5 size-5 shrink-0" />
               <div className="space-y-1">
                 <p className="text-sm font-medium">Relay queue draining</p>
                 <p className="text-muted-foreground text-sm">

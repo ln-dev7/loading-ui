@@ -1,6 +1,110 @@
 ---
 title: Typing
-description: A typing-style indicator for chat, search, and async text flows.
+description: Vertical wave dots that read like keystrokes—chat, search, and co-editing surfaces.
 ---
 
-Coming soon.
+<ComponentPreview name="typing-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/typing
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="typing" title="components/loading-ui/typing.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Typing } from "@/components/loading-ui/typing";
+```
+
+```tsx
+<Typing />
+```
+
+## Customization
+
+`Typing` animates `translateY` with a short period so each dot feels like it is tapping upward in sequence. Color flows through `bg-current` and inherited foreground. Cycle length is driven by **`--tw-animation-duration`** (default **1s**); delay steps stay at **160ms** per index.
+
+### Size
+
+Widen the container for calmer motion; keep rows tight next to baseline text.
+
+<ComponentPreview name="typing-size" />
+
+### Color
+
+Vivid hex swatches for documentation clarity.
+
+<ComponentPreview name="typing-color" />
+
+### Duration
+
+Faster reads as rapid typing; slower feels more relaxed or “thinking.”
+
+<ComponentPreview name="typing-duration" />
+
+### Dot count
+
+Match the density of your message chrome—three is the usual chat default.
+
+<ComponentPreview name="typing-count" />
+
+## Examples
+
+Bias examples toward **text and presence**: disabled buttons that mirror chat copy, accordion headers for collaborators, command inputs, and tooltips that explain live editors.
+
+### Button
+
+Disabled state sells “read-only until idle” without swapping components.
+
+<ComponentPreview name="typing-button" />
+
+### Badge
+
+Great for omnibar, doc header, or thread list chips.
+
+<ComponentPreview name="typing-badge" />
+
+### Accordion
+
+Stack typing motion with a participant list in the panel body.
+
+<ComponentPreview name="typing-accordion" />
+
+### Input group
+
+Leading addon slot mirrors command palettes and search-as-you-type rows.
+
+<ComponentPreview name="typing-input-group" />
+
+### Tooltip
+
+Contrast the dots against the tooltip surface with `text-background` when needed.
+
+<ComponentPreview name="typing-tooltip" />

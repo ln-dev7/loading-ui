@@ -12,7 +12,7 @@ export default function DotsAccordion() {
       <AccordionItem value="draft">
         <AccordionTrigger className="items-center gap-3 py-4 hover:no-underline">
           <div className="bg-primary/10 flex h-10 w-14 shrink-0 items-center justify-center rounded-md">
-            <Dots className="w-9 text-primary" />
+            <Dots className="w-9" />
           </div>
           <span className="flex flex-col gap-0.5 text-left">
             <span>Answer is being composed</span>

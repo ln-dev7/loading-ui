@@ -16,7 +16,7 @@ export default function PulseTooltip() {
             Health check
           </TooltipTrigger>
           <TooltipContent className="flex max-w-xs items-start gap-2">
-            <Pulse className="mt-0.5 size-3.5 shrink-0 text-background" />
+            <Pulse className="mt-0.5 size-3.5 shrink-0" />
             <span>
               Endpoint is up but latency is elevated—this pulse mirrors the soft
               backoff before we declare green.

@@ -15,7 +15,7 @@ export default function DashRingInputGroup() {
           rows={5}
         />
         <InputGroupAddon align="block-end">
-          <DashRing className="size-4 text-muted-foreground" />
+          <DashRing className="size-4" />
           <span className="text-muted-foreground">Synthesizing answer…</span>
         </InputGroupAddon>
       </InputGroup>

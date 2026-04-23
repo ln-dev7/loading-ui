@@ -51,7 +51,7 @@ import { PulseDot } from "@/components/loading-ui/pulse-dot";
 
 ## Customization
 
-The dot is a `rounded-full` block with `bg-current`, so **color** comes from `text-*` / inherited foreground. Scale sets how large the “breathing” motion feels relative to surrounding copy.
+The dot is a `rounded-full` block with `bg-current`, so **color** follows inherited foreground and `currentColor`. Scale sets how large the “breathing” motion feels relative to surrounding copy.
 
 ### Size
 
@@ -61,7 +61,7 @@ Chat UIs usually keep this tiny—`size-2` or `size-2.5` beside baseline text, l
 
 ### Color
 
-Because the dot is filled with `bg-current`, its hue always follows the element’s **text color**. In real layouts you typically set that with theme utilities (for example `text-muted-foreground` beside assistant copy, or `text-primary` for a branded accent), or you inherit color from a parent wrapper.
+Because the dot is filled with `bg-current`, its hue follows the element’s **text color** / `currentColor`. The preview below uses `text-[#…]` on purpose so the swatches stay obvious; in real layouts you usually inherit from a parent or use whatever color API matches your theme.
 
 <ComponentPreview name="pulse-dot-color" />
 

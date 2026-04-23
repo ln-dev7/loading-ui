@@ -12,7 +12,7 @@ export default function ConcentricRingAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia>
-        <ConcentricRing className="size-5 text-primary" />
+        <ConcentricRing className="size-5" />
       </AlertMedia>
       <AlertTitle>Repository scan is still running</AlertTitle>
       <AlertDescription>

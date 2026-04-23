@@ -15,7 +15,7 @@ export default function PulseDotInputGroup() {
           className="text-muted-foreground"
         />
         <InputGroupAddon align="inline-end" className="gap-2 pr-3">
-          <PulseDot className="size-2 text-muted-foreground" />
+          <PulseDot className="size-2" />
           <span className="text-muted-foreground text-xs">Generating…</span>
         </InputGroupAddon>
       </InputGroup>

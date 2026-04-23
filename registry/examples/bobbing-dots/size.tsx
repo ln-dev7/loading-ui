@@ -2,7 +2,7 @@ import { BobbingDots } from "@/registry/components/loading-ui/bobbing-dots";
 
 export function BobbingDotsSize() {
   return (
-    <div className="flex items-end gap-8 text-muted-foreground">
+    <div className="flex items-end gap-8">
       <BobbingDots className="w-10" />
       <BobbingDots className="w-14" />
       <BobbingDots className="w-20" />

@@ -14,7 +14,7 @@ export default function OrbitRingEmpty() {
     <Empty className="w-full max-w-md">
       <EmptyHeader>
         <EmptyMedia variant="icon" className="size-14 rounded-full">
-          <OrbitRing className="size-7 text-primary" />
+          <OrbitRing className="size-7" />
         </EmptyMedia>
         <EmptyTitle>Mapping your workspace</EmptyTitle>
         <EmptyDescription>

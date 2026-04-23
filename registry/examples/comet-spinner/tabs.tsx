@@ -23,7 +23,7 @@ export default function CometSpinnerTabs() {
         </div>
       </TabsContent>
       <TabsContent value="integrity">
-        <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+        <div className="text-muted-foreground rounded-xl border border-dashed p-5 text-sm">
           Checksums will appear here once the comet pass finishes.
         </div>
       </TabsContent>

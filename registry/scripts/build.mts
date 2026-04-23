@@ -77,13 +77,15 @@ async function formatGeneratedJson(value: unknown, filePath: string) {
 async function buildExamplesIndex() {
   const examplesDir = path.join(process.cwd(), "registry/examples");
 
-  const files = (await collectFiles(
-    examplesDir,
-    (filePath) =>
-      filePath.endsWith(".tsx") &&
-      path.basename(filePath) !== "__index__.tsx" &&
-      !path.basename(filePath).startsWith("__"),
-  )).map((filePath: string) =>
+  const files = (
+    await collectFiles(
+      examplesDir,
+      (filePath) =>
+        filePath.endsWith(".tsx") &&
+        path.basename(filePath) !== "__index__.tsx" &&
+        !path.basename(filePath).startsWith("__"),
+    )
+  ).map((filePath: string) =>
     path.relative(examplesDir, filePath).replaceAll("\\", "/"),
   );
 

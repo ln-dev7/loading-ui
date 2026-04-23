@@ -12,7 +12,7 @@ export default function ClockRingAlert() {
   return (
     <Alert className="w-full max-w-md border-dashed">
       <AlertMedia>
-        <ClockRing className="size-5 text-amber-600 dark:text-amber-400" />
+        <ClockRing className="size-5" />
       </AlertMedia>
       <AlertTitle>Calendar sync is catching up</AlertTitle>
       <AlertDescription>

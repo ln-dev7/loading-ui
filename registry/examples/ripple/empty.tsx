@@ -14,7 +14,7 @@ export default function RippleEmpty() {
     <Empty className="w-full max-w-md">
       <EmptyHeader>
         <EmptyMedia variant="icon" className="size-14 rounded-full border">
-          <Ripple className="size-8 text-muted-foreground" />
+          <Ripple className="size-8" />
         </EmptyMedia>
         <EmptyTitle>Widening the search</EmptyTitle>
         <EmptyDescription>

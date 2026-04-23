@@ -12,7 +12,7 @@ export default function SwirlingAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia>
-        <Swirling className="size-5 text-primary" />
+        <Swirling className="size-5" />
       </AlertMedia>
       <AlertTitle>Media processing is still underway</AlertTitle>
       <AlertDescription>

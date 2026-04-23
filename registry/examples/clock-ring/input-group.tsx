@@ -11,14 +11,14 @@ export default function ClockRingInputGroup() {
       <InputGroup>
         <InputGroupInput placeholder="14:30 — team standup" disabled />
         <InputGroupAddon align="inline-end" className="gap-2">
-          <ClockRing className="size-4 text-muted-foreground" />
+          <ClockRing className="size-4" />
           <span className="text-muted-foreground">Resolving slot…</span>
         </InputGroupAddon>
       </InputGroup>
       <InputGroup>
         <InputGroupInput placeholder="America / Chicago" disabled />
         <InputGroupAddon align="inline-end" className="gap-2">
-          <ClockRing className="size-4 text-muted-foreground" />
+          <ClockRing className="size-4" />
           <span className="text-muted-foreground">IANA lookup</span>
         </InputGroupAddon>
       </InputGroup>

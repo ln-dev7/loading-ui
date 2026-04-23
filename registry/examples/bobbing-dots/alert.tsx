@@ -10,9 +10,9 @@ import { BobbingDots } from "@/registry/components/loading-ui/bobbing-dots";
 
 export default function BobbingDotsAlert() {
   return (
-    <Alert className="w-full max-w-md border-2 border-dashed border-primary/20 bg-primary/5">
+    <Alert className="border-primary/20 bg-primary/5 w-full max-w-md border-2 border-dashed">
       <AlertMedia>
-        <BobbingDots className="text-primary w-12" />
+        <BobbingDots className="w-12" />
       </AlertMedia>
       <AlertTitle>Fun Friday build incoming</AlertTitle>
       <AlertDescription>

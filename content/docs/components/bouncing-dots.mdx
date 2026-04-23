@@ -1,6 +1,119 @@
 ---
 title: Bouncing dots
-description: A row of elastic dots for inline or full-width loading feedback.
+description: Elastic scale-and-opacity dots—bouncy inline feedback for queues, ingests, and playful waits.
 ---
 
-Coming soon.
+<ComponentPreview name="bouncing-dots-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/bouncing-dots
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="bouncing-dots"
+  title="components/loading-ui/bouncing-dots.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { BouncingDots } from "@/components/loading-ui/bouncing-dots";
+```
+
+```tsx
+<BouncingDots />
+```
+
+## Customization
+
+`BouncingDots` shares the same flex row recipe as `Dots` and `Typing`: percentage gap, `grow` markers, and `bg-current` (inherited foreground). Each dot eases between smaller dimmer and larger brighter keyframes. Timing uses **`--tw-animation-duration`** (default **1.4s**); stagger delays stay fixed.
+
+### Size
+
+Control overall width—the dots share space evenly inside the row.
+
+<ComponentPreview name="bouncing-dots-size" />
+
+### Color
+
+Arbitrary hex swatches for obvious documentation color.
+
+<ComponentPreview name="bouncing-dots-color" />
+
+### Duration
+
+Slow the bounce for calmer surfaces or speed it up for snappy microtasks.
+
+<ComponentPreview name="bouncing-dots-duration" />
+
+### Dot count
+
+Add markers when the queue feels busier or you want a wider rhythm.
+
+<ComponentPreview name="bouncing-dots-count" />
+
+## Examples
+
+Surface variety keeps the bounce from feeling repetitive: alerts for status, a bottom sheet for mobile-friendly queues, tabs for live vs history, and a tight popover for async hints.
+
+### Button
+
+`gap-2` gives the row room to expand without crowding the label.
+
+<ComponentPreview name="bouncing-dots-button" />
+
+### Badge
+
+Compact chips for “spring load” or retry states.
+
+<ComponentPreview name="bouncing-dots-badge" />
+
+### Alert
+
+Pair with operational copy when throughput is still stretching.
+
+<ComponentPreview name="bouncing-dots-alert" />
+
+### Sheet
+
+`side="bottom"` is ideal for thumb reach plus a centered bounce.
+
+<ComponentPreview name="bouncing-dots-sheet" />
+
+### Tabs
+
+Let users compare live ingest against a quieter history tab.
+
+<ComponentPreview name="bouncing-dots-tabs" />
+
+### Popover
+
+Short copy, small footprint, one accent color on the dots.
+
+<ComponentPreview name="bouncing-dots-popover" />

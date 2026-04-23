@@ -11,7 +11,7 @@ export default function SpiralTabs() {
       <TabsContent value="summary">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <div className="rounded-full bg-primary/10 p-2 leading-0">
+            <div className="bg-primary/10 rounded-full p-2 leading-0">
               <Spiral className="size-5" dots={8} />
             </div>
             <div className="space-y-1">
@@ -24,7 +24,7 @@ export default function SpiralTabs() {
         </div>
       </TabsContent>
       <TabsContent value="changes">
-        <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+        <div className="text-muted-foreground rounded-xl border border-dashed p-5 text-sm">
           File changes stay available while the summary view updates.
         </div>
       </TabsContent>

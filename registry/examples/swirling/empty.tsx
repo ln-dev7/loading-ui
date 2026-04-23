@@ -14,7 +14,7 @@ export default function SwirlingEmpty() {
     <Empty className="w-full max-w-md">
       <EmptyHeader>
         <EmptyMedia variant="icon">
-          <Swirling className="size-7 text-primary" />
+          <Swirling className="size-7" />
         </EmptyMedia>
         <EmptyTitle>Building your campaign kit</EmptyTitle>
         <EmptyDescription>

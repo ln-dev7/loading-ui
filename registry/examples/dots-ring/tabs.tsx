@@ -11,7 +11,7 @@ export default function DotsRingTabs() {
       <TabsContent value="overview">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <div className="rounded-full bg-primary/10 size-9 flex items-center justify-center">
+            <div className="bg-primary/10 flex size-9 items-center justify-center rounded-full">
               <DotsRing className="size-5" dots={8} dotScale={0.22} />
             </div>
             <div className="space-y-1">
@@ -24,7 +24,7 @@ export default function DotsRingTabs() {
         </div>
       </TabsContent>
       <TabsContent value="activity">
-        <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+        <div className="text-muted-foreground rounded-xl border border-dashed p-5 text-sm">
           Historical activity stays available while the overview reloads.
         </div>
       </TabsContent>

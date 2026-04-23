@@ -20,7 +20,7 @@ export default function DotsInputGroup() {
             <Dots className="w-8" />
             <span>Assistant is still typing</span>
           </div>
-          <span className="text-muted-foreground text-[10px] uppercase tracking-wide">
+          <span className="text-muted-foreground text-[10px] tracking-wide uppercase">
             Esc to cancel
           </span>
         </InputGroupAddon>

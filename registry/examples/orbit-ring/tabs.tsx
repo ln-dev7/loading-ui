@@ -23,7 +23,7 @@ export default function OrbitRingTabs() {
         </div>
       </TabsContent>
       <TabsContent value="history">
-        <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+        <div className="text-muted-foreground rounded-xl border border-dashed p-5 text-sm">
           History remains available while the overview panel reloads.
         </div>
       </TabsContent>

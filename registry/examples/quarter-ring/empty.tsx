@@ -11,10 +11,10 @@ import { QuarterRing } from "@/registry/components/loading-ui/quarter-ring";
 
 export default function QuarterRingEmpty() {
   return (
-    <Empty className="w-full max-w-md rounded-xl border border-dashed bg-muted/20">
+    <Empty className="bg-muted/20 w-full max-w-md rounded-xl border border-dashed">
       <EmptyHeader>
         <EmptyMedia variant="icon" className="size-12 rounded-full border">
-          <QuarterRing className="size-6 text-primary" />
+          <QuarterRing className="size-6" />
         </EmptyMedia>
         <EmptyTitle>Sketching a compact preview</EmptyTitle>
         <EmptyDescription>

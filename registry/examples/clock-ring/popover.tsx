@@ -25,10 +25,10 @@ export default function ClockRingPopover() {
             </PopoverDescription>
           </PopoverHeader>
           <div className="bg-muted/50 flex items-center gap-3 rounded-md border px-3 py-2.5">
-            <ClockRing className="size-5 shrink-0 text-primary" />
+            <ClockRing className="size-5 shrink-0" />
             <p className="text-muted-foreground text-sm leading-snug">
-              Policy engine is recalculating blackout ranges from your
-              on-call rotations.
+              Policy engine is recalculating blackout ranges from your on-call
+              rotations.
             </p>
           </div>
         </PopoverContent>

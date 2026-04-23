@@ -11,11 +11,11 @@ export default function DashRingCollapsible() {
   return (
     <Collapsible
       defaultOpen
-      className="w-full max-w-md rounded-xl border bg-card text-card-foreground shadow-xs"
+      className="bg-card text-card-foreground w-full max-w-md rounded-xl border shadow-xs"
     >
       <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 p-4 text-left">
         <div className="flex items-center gap-3">
-          <DashRing className="size-6 shrink-0 text-muted-foreground" />
+          <DashRing className="size-6 shrink-0" />
           <div className="space-y-1">
             <div className="font-medium">Buffering the next chunk</div>
             <p className="text-muted-foreground text-sm">

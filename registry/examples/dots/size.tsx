@@ -2,7 +2,7 @@ import { Dots } from "@/registry/components/loading-ui/dots";
 
 export function DotsSize() {
   return (
-    <div className="flex gap-8 flex-col items-center">
+    <div className="flex flex-col items-center gap-8">
       <Dots className="w-10" />
       <Dots className="w-14" />
       <Dots className="w-20" />

@@ -9,9 +9,9 @@ export default function BobbingDotsTabs() {
         <TabsTrigger value="timeline">Timeline</TabsTrigger>
       </TabsList>
       <TabsContent value="preview">
-        <div className="relative overflow-hidden rounded-xl border bg-card bg-gradient-to-br from-primary/5 via-card to-muted/30 p-8 shadow-xs">
+        <div className="bg-card from-primary/5 via-card to-muted/30 relative overflow-hidden rounded-xl border bg-gradient-to-br p-8 shadow-xs">
           <div className="flex flex-col items-center gap-4">
-            <BobbingDots className="text-primary w-14" dots={4} />
+            <BobbingDots className="w-14" dots={4} />
             <div className="space-y-1 text-center">
               <p className="text-sm font-medium">Rendering motion study</p>
               <p className="text-muted-foreground text-xs">
@@ -22,7 +22,7 @@ export default function BobbingDotsTabs() {
         </div>
       </TabsContent>
       <TabsContent value="timeline">
-        <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+        <div className="text-muted-foreground rounded-xl border border-dashed p-5 text-sm">
           Keyframes appear here once the playful pass completes.
         </div>
       </TabsContent>

@@ -11,7 +11,7 @@ export default function ArcTabs() {
       <TabsContent value="overview">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <div className="rounded-full bg-primary/10 p-2 leading-0">
+            <div className="bg-primary/10 rounded-full p-2 leading-0">
               <Arc className="size-5 border-[3px]" />
             </div>
             <div className="space-y-1">
@@ -24,7 +24,7 @@ export default function ArcTabs() {
         </div>
       </TabsContent>
       <TabsContent value="reports">
-        <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+        <div className="text-muted-foreground rounded-xl border border-dashed p-5 text-sm">
           Saved reports are available while the live overview reloads.
         </div>
       </TabsContent>

@@ -27,7 +27,10 @@ The registry entry pulls in **Motion** (`motion`); the CLI step should install i
 
 <Steps className="mb-0 pt-2">
 
-<Step>Add Motion if you do not already use it (`motion` on npm—the import path is `motion/react`).</Step>
+<Step>
+  Add Motion if you do not already use it (`motion` on npm—the import path is
+  `motion/react`).
+</Step>
 
 <Step>Copy and paste the following code into your project.</Step>
 
@@ -56,7 +59,7 @@ import { BobbingDots } from "@/components/loading-ui/bobbing-dots";
 
 ## Customization
 
-`BobbingDots` mirrors `Dots` layout: percentage gap, `grow` dots, and **`text-*`** for `bg-current`. Vertical motion is handled by Motion with a staggered delay per index. Use **`duration`** (seconds, default `1`) to speed up or slow the bounce without touching the keyframes.
+`BobbingDots` mirrors `Dots` layout: percentage gap, `grow` dots, and `bg-current` (inherited foreground). Vertical motion is handled by Motion with a staggered delay per index. Use **`duration`** (seconds, default `1`) to speed up or slow the bounce without touching the keyframes.
 
 ### Size
 
@@ -66,7 +69,7 @@ Scale the row with width utilities; larger widths give each dot more room to tra
 
 ### Color
 
-Semantic row first, vivid hex row second—same idea as the blinking `Dots` showcase.
+Three vivid hex swatches—same idea as the blinking `Dots` showcase.
 
 <ComponentPreview name="bobbing-dots-color" />
 

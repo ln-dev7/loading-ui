@@ -290,6 +290,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "bouncing-dots-alert": {
+    name: "bouncing-dots-alert",
+    filePath: "registry/examples/bouncing-dots/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-badge": {
+    name: "bouncing-dots-badge",
+    filePath: "registry/examples/bouncing-dots/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-button": {
+    name: "bouncing-dots-button",
+    filePath: "registry/examples/bouncing-dots/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-color": {
+    name: "bouncing-dots-color",
+    filePath: "registry/examples/bouncing-dots/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-count": {
+    name: "bouncing-dots-count",
+    filePath: "registry/examples/bouncing-dots/count.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-count";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "bouncing-dots-demo": {
     name: "bouncing-dots-demo",
     filePath: "registry/examples/bouncing-dots/demo.tsx",
@@ -300,6 +365,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "bouncing-dots-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-duration": {
+    name: "bouncing-dots-duration",
+    filePath: "registry/examples/bouncing-dots/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-popover": {
+    name: "bouncing-dots-popover",
+    filePath: "registry/examples/bouncing-dots/popover.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/popover.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-popover";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-sheet": {
+    name: "bouncing-dots-sheet",
+    filePath: "registry/examples/bouncing-dots/sheet.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/sheet.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-sheet";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-size": {
+    name: "bouncing-dots-size",
+    filePath: "registry/examples/bouncing-dots/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bouncing-dots-tabs": {
+    name: "bouncing-dots-tabs",
+    filePath: "registry/examples/bouncing-dots/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bouncing-dots/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bouncing-dots-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -2474,6 +2604,71 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "typing-accordion": {
+    name: "typing-accordion",
+    filePath: "registry/examples/typing/accordion.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/accordion.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-accordion";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-badge": {
+    name: "typing-badge",
+    filePath: "registry/examples/typing/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-button": {
+    name: "typing-button",
+    filePath: "registry/examples/typing/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-color": {
+    name: "typing-color",
+    filePath: "registry/examples/typing/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-count": {
+    name: "typing-count",
+    filePath: "registry/examples/typing/count.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-count";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "typing-demo": {
     name: "typing-demo",
     filePath: "registry/examples/typing/demo.tsx",
@@ -2484,6 +2679,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "typing-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-duration": {
+    name: "typing-duration",
+    filePath: "registry/examples/typing/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-input-group": {
+    name: "typing-input-group",
+    filePath: "registry/examples/typing/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-size": {
+    name: "typing-size",
+    filePath: "registry/examples/typing/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "typing-tooltip": {
+    name: "typing-tooltip",
+    filePath: "registry/examples/typing/tooltip.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./typing/tooltip.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "typing-tooltip";
       return { default: mod.default || mod[exportName] };
     }),
   },

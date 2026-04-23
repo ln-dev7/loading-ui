@@ -1,5 +1,5 @@
 import { PulseDot } from "@/registry/components/loading-ui/pulse-dot";
 
 export function PulseDotDemo() {
-  return <PulseDot className="size-3 text-muted-foreground" />;
+  return <PulseDot className="size-3" />;
 }

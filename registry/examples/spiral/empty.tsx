@@ -14,7 +14,7 @@ export default function SpiralEmpty() {
     <Empty className="w-full max-w-md">
       <EmptyHeader>
         <EmptyMedia variant="icon" className="size-14 rounded-full">
-          <Spiral className="size-7 text-primary" dots={10} />
+          <Spiral className="size-7" dots={10} />
         </EmptyMedia>
         <EmptyTitle>Organizing your workspace</EmptyTitle>
         <EmptyDescription>

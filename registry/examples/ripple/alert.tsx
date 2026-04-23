@@ -12,7 +12,7 @@ export default function RippleAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia>
-        <Ripple className="size-6 text-primary" />
+        <Ripple className="size-6" />
       </AlertMedia>
       <AlertTitle>Still listening across regions</AlertTitle>
       <AlertDescription>

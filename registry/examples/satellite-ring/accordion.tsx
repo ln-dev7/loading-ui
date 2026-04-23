@@ -12,7 +12,7 @@ export default function SatelliteRingAccordion() {
       <AccordionItem value="rollout">
         <AccordionTrigger className="items-center gap-3 py-4 hover:no-underline">
           <div className="bg-muted flex size-9 shrink-0 items-center justify-center rounded-full">
-            <SatelliteRing className="size-4 text-primary" />
+            <SatelliteRing className="size-4" />
           </div>
           <span className="flex flex-col gap-0.5 text-left">
             <span>Regional rollout in flight</span>
@@ -32,8 +32,8 @@ export default function SatelliteRingAccordion() {
         <AccordionTrigger>Health checks</AccordionTrigger>
         <AccordionContent>
           <p className="text-muted-foreground pb-2 text-sm">
-            Synthetic probes will flip to green once all regions acknowledge
-            the new revision.
+            Synthetic probes will flip to green once all regions acknowledge the
+            new revision.
           </p>
         </AccordionContent>
       </AccordionItem>

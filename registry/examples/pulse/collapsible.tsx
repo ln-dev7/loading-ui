@@ -11,11 +11,11 @@ export default function PulseCollapsible() {
   return (
     <Collapsible
       defaultOpen
-      className="w-full max-w-md rounded-xl border border-dashed bg-muted/15"
+      className="bg-muted/15 w-full max-w-md rounded-xl border border-dashed"
     >
       <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 p-4 text-left">
         <div className="flex items-center gap-3">
-          <Pulse className="size-5 text-primary" />
+          <Pulse className="size-5" />
           <div className="space-y-1">
             <div className="font-medium">Background polish in progress</div>
             <p className="text-muted-foreground text-sm">

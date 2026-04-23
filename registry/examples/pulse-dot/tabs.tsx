@@ -10,7 +10,7 @@ export default function PulseDotTabs() {
       </TabsList>
       <TabsContent value="reply">
         <div className="bg-muted/40 text-muted-foreground flex items-center gap-2 rounded-xl border px-4 py-6 text-sm">
-          <PulseDot className="mr-1 size-3 shrink-0 text-foreground" />
+          <PulseDot className="mr-1 size-3 shrink-0" />
           <span>
             Same single-dot idiom you see in{" "}
             <span className="text-foreground font-medium">ChatGPT</span> while a
@@ -19,7 +19,7 @@ export default function PulseDotTabs() {
         </div>
       </TabsContent>
       <TabsContent value="sources">
-        <div className="rounded-xl border border-dashed p-5 text-sm text-muted-foreground">
+        <div className="text-muted-foreground rounded-xl border border-dashed p-5 text-sm">
           Citations load after the assistant finishes the visible reply.
         </div>
       </TabsContent>

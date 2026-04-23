@@ -12,7 +12,7 @@ export default function SpokesAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia>
-        <Spokes className="size-4 text-muted-foreground" />
+        <Spokes className="size-4" />
       </AlertMedia>
       <AlertTitle>Generating preview assets</AlertTitle>
       <AlertDescription>
