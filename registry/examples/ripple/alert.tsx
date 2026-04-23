@@ -6,22 +6,22 @@ import {
   AlertMedia,
   AlertTitle,
 } from "@/components/ui/alert";
-import { CometSpinner } from "@/registry/components/loading-ui/comet-spinner";
+import { Ripple } from "@/registry/components/loading-ui/ripple";
 
-export default function CometSpinnerAlert() {
+export default function RippleAlert() {
   return (
     <Alert className="w-full max-w-md">
       <AlertMedia>
-        <CometSpinner className="size-2.5" duration="1.4s" />
+        <Ripple className="size-6 text-primary" />
       </AlertMedia>
-      <AlertTitle>Large upload entering the fast lane</AlertTitle>
+      <AlertTitle>Still listening across regions</AlertTitle>
       <AlertDescription>
-        The comet metaphor fits when throughput suddenly jumps—users see motion
-        that feels directional, not stuck in place.
+        Concentric ripples read well for “we are out there looking” without
+        implying a hard failure—pair with honest copy about what is scanning.
       </AlertDescription>
       <AlertAction>
         <Button variant="outline" size="xs">
-          View queue
+          Details
         </Button>
       </AlertAction>
     </Alert>

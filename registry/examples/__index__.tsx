@@ -1096,6 +1096,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "pulse-dot-badge": {
+    name: "pulse-dot-badge",
+    filePath: "registry/examples/pulse-dot/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-dot-button": {
+    name: "pulse-dot-button",
+    filePath: "registry/examples/pulse-dot/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-dot-color": {
+    name: "pulse-dot-color",
+    filePath: "registry/examples/pulse-dot/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "pulse-dot-demo": {
     name: "pulse-dot-demo",
     filePath: "registry/examples/pulse-dot/demo.tsx",
@@ -1106,6 +1145,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "pulse-dot-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-dot-duration": {
+    name: "pulse-dot-duration",
+    filePath: "registry/examples/pulse-dot/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-dot-input-group": {
+    name: "pulse-dot-input-group",
+    filePath: "registry/examples/pulse-dot/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-dot-size": {
+    name: "pulse-dot-size",
+    filePath: "registry/examples/pulse-dot/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "pulse-dot-tabs": {
+    name: "pulse-dot-tabs",
+    filePath: "registry/examples/pulse-dot/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./pulse-dot/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "pulse-dot-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -1473,6 +1564,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "ripple-alert": {
+    name: "ripple-alert",
+    filePath: "registry/examples/ripple/alert.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple/alert.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-alert";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "ripple-badge": {
+    name: "ripple-badge",
+    filePath: "registry/examples/ripple/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "ripple-button": {
+    name: "ripple-button",
+    filePath: "registry/examples/ripple/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "ripple-color": {
+    name: "ripple-color",
+    filePath: "registry/examples/ripple/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "ripple-demo": {
     name: "ripple-demo",
     filePath: "registry/examples/ripple/demo.tsx",
@@ -1483,6 +1626,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "ripple-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "ripple-empty": {
+    name: "ripple-empty",
+    filePath: "registry/examples/ripple/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "ripple-ring-weight": {
+    name: "ripple-ring-weight",
+    filePath: "registry/examples/ripple/ring-weight.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple/ring-weight.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-ring-weight";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "ripple-size": {
+    name: "ripple-size",
+    filePath: "registry/examples/ripple/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./ripple/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "ripple-size";
       return { default: mod.default || mod[exportName] };
     }),
   },

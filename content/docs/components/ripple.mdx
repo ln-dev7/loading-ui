@@ -1,6 +1,100 @@
 ---
 title: Ripple
-description: Concentric ripples for soft, radar-like indeterminate progress.
+description: Concentric expanding ripples for radar-like, soft indeterminate progress.
 ---
 
-Coming soon.
+<ComponentPreview name="ripple-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/ripple
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="ripple" title="components/loading-ui/ripple.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Ripple } from "@/components/loading-ui/ripple";
+```
+
+```tsx
+<Ripple />
+```
+
+## Customization
+
+`Ripple` is an SVG with two staggered circles: each ring grows and fades using SMIL animation. Color follows `currentColor` on the strokes, and the overall scale comes from `size-*` on the root.
+
+### Size
+
+Ripples read best with a little breathing room—step from compact inline sizes up to hero-style empty states.
+
+<ComponentPreview name="ripple-size" />
+
+### Color
+
+Tint with text utilities so the waves match primary actions, muted chrome, or brand accents.
+
+<ComponentPreview name="ripple-color" />
+
+### Ring weight
+
+The group defaults to a medium stroke; narrow or embolden both rings together with a descendant selector on the `<g>`.
+
+<ComponentPreview name="ripple-ring-weight" />
+
+### Animation cadence
+
+Expansion and fade timings are defined on the SVG `<animate>` elements (`dur`, `keySplines`, and the negative `begin` offset on the second ring). To change the rhythm, edit those values in `ripple.tsx`—they are not driven by Tailwind `animation-duration` utilities.
+
+## Examples
+
+### Button
+
+Keeps toolbar and form actions feeling “alive” while a background sweep runs.
+
+<ComponentPreview name="ripple-button" />
+
+### Badge
+
+Works in compact status chips where a full spinner would feel heavy.
+
+<ComponentPreview name="ripple-badge" />
+
+### Alert
+
+Pair with honest copy when you want to signal active scanning rather than a hard error.
+
+<ComponentPreview name="ripple-alert" />
+
+### Empty
+
+Ripples naturally occupy the focal point of an empty illustration slot.
+
+<ComponentPreview name="ripple-empty" />
