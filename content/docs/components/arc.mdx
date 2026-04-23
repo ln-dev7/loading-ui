@@ -3,4 +3,102 @@ title: Arc
 description: A curved indeterminate progress arc for loading and pending UI.
 ---
 
-Coming soon.
+<ComponentPreview name="arc-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/arc
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="arc" title="components/loading-ui/arc.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Arc } from "@/components/loading-ui/arc";
+```
+
+```tsx
+<Arc />
+```
+
+## Customization
+
+`Arc` has a bit more visual weight than the lighter segmented spinners, so it works best when you want the loading state to feel deliberate and easy to spot. Since it is just a rotating bordered circle, the most useful adjustments come from size, color, border thickness, and timing.
+
+### Size
+
+Scale the loader up or down with `size-*` utilities depending on whether it sits inline or anchors a larger empty state.
+
+<ComponentPreview name="arc-size" />
+
+### Color
+
+`Arc` inherits `currentColor`, which makes it easy to align with brand accents, muted UI, or context-specific status colors.
+
+<ComponentPreview name="arc-color" />
+
+### Border Width
+
+Changing the border thickness noticeably shifts the feel of the component, especially at medium and larger sizes.
+
+<ComponentPreview name="arc-border-width" />
+
+### Duration
+
+Animation speed is often the difference between a loader feeling calm and backgrounded versus urgent and active.
+
+<ComponentPreview name="arc-duration" />
+
+## Examples
+
+These examples showcase the settings where `Arc` tends to read best: framed UI, more prominent surfaces, and states where the loader should feel a little more substantial than a minimal inline spinner.
+
+### Button
+
+Inside buttons, `Arc` works well when you want the action state to feel a bit more deliberate than a tiny inline indicator.
+
+<ComponentPreview name="arc-button" />
+
+### Badge
+
+With a thinner border, `Arc` also fits nicely inside compact status pills for syncing and refresh states.
+
+<ComponentPreview name="arc-badge" />
+
+### Empty
+
+For section-level waiting states, the curved shape gives enough presence to anchor the empty state without needing extra ornament.
+
+<ComponentPreview name="arc-empty" />
+
+### Tabs
+
+Use `Arc` inside tab content when a single panel is refreshing but the broader workspace remains interactive.
+
+<ComponentPreview name="arc-tabs" />

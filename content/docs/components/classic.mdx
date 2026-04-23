@@ -3,4 +3,78 @@ title: Classic
 description: A familiar spinner style that fits most apps and form contexts.
 ---
 
-Coming soon.
+<ComponentPreview name="classic-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/classic
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="classic" title="components/loading-ui/classic.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Classic } from "@/components/loading-ui/classic";
+```
+
+```tsx
+<Classic />
+```
+
+## Customization
+
+`Classic` is the most familiar loading treatment in the set. It works especially well when you want a spinner that feels native to buttons, inputs, dialogs, and form-heavy UI without drawing too much attention to itself.
+
+### Size
+
+Adjust the overall footprint with `size-*` utilities depending on whether the spinner is sitting inline with text or acting as the main indicator in a small panel.
+
+<ComponentPreview name="classic-size" />
+
+### Color
+
+The spinner uses `currentColor`, so direct text color utilities or inherited color from a parent are enough to restyle it.
+
+<ComponentPreview name="classic-color" />
+
+## Examples
+
+These examples focus on the patterns where `Classic` tends to feel most natural: compact controls, inline validation, and background activity states that should stay readable but unobtrusive.
+
+### Button
+
+Use `Classic` in action buttons when you want a familiar loading cue that blends into the control instead of dominating it.
+
+<ComponentPreview name="classic-button" />
+
+### Input Group
+
+In input groups, `Classic` works well for field-level checks and message drafting states that stay close to the control they affect.
+
+<ComponentPreview name="classic-input-group" />

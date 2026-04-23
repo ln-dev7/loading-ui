@@ -17,6 +17,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "arc-badge": {
+    name: "arc-badge",
+    filePath: "registry/examples/arc/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "arc-border-width": {
+    name: "arc-border-width",
+    filePath: "registry/examples/arc/border-width.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/border-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-border-width";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "arc-button": {
+    name: "arc-button",
+    filePath: "registry/examples/arc/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "arc-color": {
+    name: "arc-color",
+    filePath: "registry/examples/arc/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "arc-demo": {
     name: "arc-demo",
     filePath: "registry/examples/arc/demo.tsx",
@@ -27,6 +79,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "arc-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "arc-duration": {
+    name: "arc-duration",
+    filePath: "registry/examples/arc/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "arc-empty": {
+    name: "arc-empty",
+    filePath: "registry/examples/arc/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "arc-size": {
+    name: "arc-size",
+    filePath: "registry/examples/arc/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "arc-tabs": {
+    name: "arc-tabs",
+    filePath: "registry/examples/arc/tabs.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./arc/tabs.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "arc-tabs";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -69,6 +173,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "classic-button": {
+    name: "classic-button",
+    filePath: "registry/examples/classic/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./classic/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "classic-color": {
+    name: "classic-color",
+    filePath: "registry/examples/classic/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./classic/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "classic-demo": {
     name: "classic-demo",
     filePath: "registry/examples/classic/demo.tsx",
@@ -79,6 +209,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "classic-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "classic-input-group": {
+    name: "classic-input-group",
+    filePath: "registry/examples/classic/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./classic/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "classic-size": {
+    name: "classic-size",
+    filePath: "registry/examples/classic/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./classic/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "classic-size";
       return { default: mod.default || mod[exportName] };
     }),
   },
