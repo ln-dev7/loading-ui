@@ -15,7 +15,7 @@ export default function SpiralCollapsible() {
     >
       <CollapsibleTrigger className="flex w-full items-center justify-between gap-4 p-4 text-left">
         <div className="flex items-center gap-3">
-          <div className="rounded-full bg-primary/10 p-2 leading-none">
+          <div className="rounded-full bg-primary/10 p-2 leading-0">
             <Spiral className="size-5" dots={8} />
           </div>
           <div className="space-y-1">

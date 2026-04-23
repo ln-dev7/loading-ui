@@ -18,7 +18,8 @@ function OrbitRing({ className, ...props }: React.ComponentProps<"span">) {
         role="status"
         className={cn("relative inline-block", className)}
         style={{
-          animation: "loading-ui-orbit-ring-rotation 1s linear infinite",
+          animation:
+            "loading-ui-orbit-ring-rotation var(--tw-animation-duration, 1s) linear infinite",
         }}
         {...props}
       >

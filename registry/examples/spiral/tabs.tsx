@@ -11,7 +11,7 @@ export default function SpiralTabs() {
       <TabsContent value="summary">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <div className="rounded-full bg-primary/10 p-2 leading-none">
+            <div className="rounded-full bg-primary/10 p-2 leading-0">
               <Spiral className="size-5" dots={8} />
             </div>
             <div className="space-y-1">

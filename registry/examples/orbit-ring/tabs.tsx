@@ -1,9 +1,4 @@
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { OrbitRing } from "@/registry/components/loading-ui/orbit-ring";
 
 export default function OrbitRingTabs() {
@@ -16,9 +11,8 @@ export default function OrbitRingTabs() {
       <TabsContent value="overview">
         <div className="bg-card text-card-foreground rounded-xl border p-5 shadow-xs">
           <div className="flex items-start gap-3">
-            <div className="rounded-full bg-primary/10 p-2 text-primary">
-              <OrbitRing className="size-5" />
-            </div>
+            <OrbitRing className="size-4" />
+
             <div className="space-y-1">
               <div className="font-medium">Refreshing workspace overview</div>
               <p className="text-muted-foreground text-sm">
