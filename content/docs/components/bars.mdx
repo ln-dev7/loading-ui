@@ -3,4 +3,109 @@ title: Bars
 description: A bar-style activity indicator for lists, players, and dense layouts.
 ---
 
-Coming soon.
+<ComponentPreview name="bars-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/bars
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="bars" title="components/loading-ui/bars.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Bars } from "@/components/loading-ui/bars";
+```
+
+```tsx
+<Bars className="h-12 w-16" />
+```
+
+## Customization
+
+`Bars` is a compact activity indicator for dense UI. It stretches each bar to
+the container height, divides width evenly across the `bars` count, and inherits
+`currentColor`. Timing is controlled with `--duration` and `--delay`.
+
+### Size
+
+Set a stable height and width so the bars have room to breathe next to labels or
+inside compact controls.
+
+<ComponentPreview name="bars-size" />
+
+### Color
+
+Use inherited foreground colors in product UI, or direct text utilities for
+status-specific swatches.
+
+<ComponentPreview name="bars-color" />
+
+### Duration
+
+Set `--duration` when the indicator should feel snappier or more patient.
+
+<ComponentPreview name="bars-duration" />
+
+### Stagger
+
+Set `--delay` to control how tightly the bars follow each other.
+
+<ComponentPreview name="bars-stagger" />
+
+### Bar Count
+
+Use `bars` to make the indicator denser for wider surfaces or simpler for tight
+inline states.
+
+<ComponentPreview name="bars-count" />
+
+## Examples
+
+These examples keep `Bars` close to operational UI: queues, indexing, and
+processing states where a meter-like shape feels appropriate.
+
+### Button
+
+Buttons can use `Bars` when the action is actively processing but should still
+feel compact.
+
+<ComponentPreview name="bars-button" />
+
+### Badge
+
+Badges work well for small active, queued, or indexing labels.
+
+<ComponentPreview name="bars-badge" />
+
+### Input Group
+
+Input groups keep indexing or search feedback next to the field it affects.
+
+<ComponentPreview name="bars-input-group" />

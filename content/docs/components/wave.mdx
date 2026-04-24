@@ -3,4 +3,103 @@ title: Wave
 description: A wave of bars for audio, sync, or progress-adjacent loading.
 ---
 
-Coming soon.
+<ComponentPreview name="wave-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/wave
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="wave" title="components/loading-ui/wave.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Wave } from "@/components/loading-ui/wave";
+```
+
+```tsx
+<Wave className="h-12 w-24" />
+```
+
+## Customization
+
+`Wave` uses five fixed bars with different heights, so it reads like audio,
+voice, or stream activity instead of a generic progress meter. It inherits
+`currentColor`, and the animation can be tuned with `--duration` and `--delay`.
+
+### Size
+
+Set both height and width. The internal bars use percentages, so the component
+stays balanced at compact and larger sizes.
+
+<ComponentPreview name="wave-size" />
+
+### Color
+
+The bars use `currentColor`, which makes direct text utilities and inherited
+foreground colors enough for most layouts.
+
+<ComponentPreview name="wave-color" />
+
+### Duration
+
+Set `--duration` to make the wave feel quick and responsive or calm and ambient.
+
+<ComponentPreview name="wave-duration" />
+
+### Stagger
+
+Set `--delay` to tighten or loosen the offset between bars.
+
+<ComponentPreview name="wave-stagger" />
+
+## Examples
+
+These examples use `Wave` for live audio and stream-like states where the shape
+adds meaning without needing extra text.
+
+### Button
+
+Inside buttons, the wave works well when the action is listening, capturing, or
+processing a live stream.
+
+<ComponentPreview name="wave-button" />
+
+### Badge
+
+Badges can show live or listening states without taking much space.
+
+<ComponentPreview name="wave-badge" />
+
+### Input Group
+
+Input groups keep voice capture status attached to the field that receives the
+result.
+
+<ComponentPreview name="wave-input-group" />

@@ -134,6 +134,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "bars-badge": {
+    name: "bars-badge",
+    filePath: "registry/examples/bars/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bars-button": {
+    name: "bars-button",
+    filePath: "registry/examples/bars/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bars-color": {
+    name: "bars-color",
+    filePath: "registry/examples/bars/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bars-count": {
+    name: "bars-count",
+    filePath: "registry/examples/bars/count.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/count.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-count";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "bars-demo": {
     name: "bars-demo",
     filePath: "registry/examples/bars/demo.tsx",
@@ -144,6 +196,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "bars-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bars-duration": {
+    name: "bars-duration",
+    filePath: "registry/examples/bars/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bars-input-group": {
+    name: "bars-input-group",
+    filePath: "registry/examples/bars/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bars-size": {
+    name: "bars-size",
+    filePath: "registry/examples/bars/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "bars-stagger": {
+    name: "bars-stagger",
+    filePath: "registry/examples/bars/stagger.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./bars/stagger.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "bars-stagger";
       return { default: mod.default || mod[exportName] };
     }),
   },
@@ -3436,6 +3540,45 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "wave-badge": {
+    name: "wave-badge",
+    filePath: "registry/examples/wave/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wave-button": {
+    name: "wave-button",
+    filePath: "registry/examples/wave/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wave-color": {
+    name: "wave-color",
+    filePath: "registry/examples/wave/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "wave-demo": {
     name: "wave-demo",
     filePath: "registry/examples/wave/demo.tsx",
@@ -3446,6 +3589,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "wave-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wave-duration": {
+    name: "wave-duration",
+    filePath: "registry/examples/wave/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wave-input-group": {
+    name: "wave-input-group",
+    filePath: "registry/examples/wave/input-group.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave/input-group.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-input-group";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wave-size": {
+    name: "wave-size",
+    filePath: "registry/examples/wave/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wave-stagger": {
+    name: "wave-stagger",
+    filePath: "registry/examples/wave/stagger.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wave/stagger.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wave-stagger";
       return { default: mod.default || mod[exportName] };
     }),
   },
