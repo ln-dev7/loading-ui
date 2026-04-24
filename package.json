@@ -20,7 +20,7 @@
     "lint:fix": "oxlint --fix",
     "format": "oxfmt",
     "format:fix": "oxfmt --fix",
-    "build:registry": "bun registry/scripts/build.mts"
+    "build:registry": "bun registry/scripts/build.mts && bun format"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.0",

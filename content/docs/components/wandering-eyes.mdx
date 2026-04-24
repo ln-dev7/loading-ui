@@ -3,4 +3,93 @@ title: Wandering eyes
 description: A playful pair of animated eyes for expressive or brand-led loading states.
 ---
 
-Coming soon.
+`WanderingEyes` renders two animated eyes that look around and blink. It works
+best for search, discovery, queue watching, and brand-led waiting states where a
+standard spinner would feel too mechanical.
+
+<ComponentPreview name="wandering-eyes-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/wandering-eyes
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource
+  name="wandering-eyes"
+  title="components/loading-ui/wandering-eyes.tsx"
+/>
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { WanderingEyes } from "@/components/loading-ui/wandering-eyes";
+```
+
+```tsx
+<WanderingEyes className="h-12 w-[108px]" />
+```
+
+## Customization
+
+`WanderingEyes` uses a container query box with a fixed `9 / 4` aspect ratio.
+Set both height and width for predictable layout, inherit color from the
+surrounding text, and use `--duration` for the full look-and-blink cycle.
+
+### Size
+
+Keep the width about 2.25 times the height so the eyes have room to move.
+
+<ComponentPreview name="wandering-eyes-size" />
+
+### Color
+
+By default, the eye shape is a faint version of `currentColor` and the pupil is
+solid `currentColor`.
+
+<ComponentPreview name="wandering-eyes-color" />
+
+### Color Variables
+
+Set `--eye-color` and `--pupil-color` when the loader should look more
+illustrative than inherited.
+
+<ComponentPreview name="wandering-eyes-variables" />
+
+### Duration
+
+Set `--duration` to make the gaze feel quick and curious or slower and more
+ambient.
+
+<ComponentPreview name="wandering-eyes-duration" />
+
+### Expression
+
+Use `eyeScale`, `gapScale`, `pupilScale`, `blinkScale`, and `travelScale` to
+tune the expression without editing the component.
+
+<ComponentPreview name="wandering-eyes-expression" />

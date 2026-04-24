@@ -1,8 +1,5 @@
 import { cn } from "@/lib/utils";
 
-const MOVE_ANIMATION = "loading-ui-wandering-eyes-move";
-const BLINK_ANIMATION = "loading-ui-wandering-eyes-blink";
-
 type WanderingEyesProps = React.ComponentProps<"span"> & {
   eyeScale?: number;
   gapScale?: number;
@@ -18,14 +15,14 @@ function clamp(value: number, min: number, max: number) {
 function WanderingEyes({
   className,
   style,
-  eyeScale = 0.44,
-  gapScale = 0.11,
-  pupilScale = 0.29,
+  eyeScale = 0.62,
+  gapScale = 0.09,
+  pupilScale = 0.32,
   blinkScale = 0.375,
   travelScale = 0.3125,
   ...props
 }: WanderingEyesProps) {
-  const safeEyeScale = clamp(eyeScale, 0.22, 0.48);
+  const safeEyeScale = clamp(eyeScale, 0.28, 0.7);
   const safeGapScale = clamp(gapScale, 0.04, 0.3);
   const safePupilScale = clamp(pupilScale, 0.12, 0.45);
   const safeBlinkScale = clamp(blinkScale, 0.15, 1);
@@ -42,7 +39,7 @@ function WanderingEyes({
   return (
     <>
       <style>{`
-        @keyframes ${MOVE_ANIMATION} {
+        @keyframes loading-ui-wandering-eyes-move {
           0%,
           10% {
             background-position: 0 0;
@@ -69,7 +66,7 @@ function WanderingEyes({
           }
         }
 
-        @keyframes ${BLINK_ANIMATION} {
+        @keyframes loading-ui-wandering-eyes-blink {
           0%,
           10%,
           12%,
@@ -102,7 +99,7 @@ function WanderingEyes({
       <span
         role="status"
         className={cn(
-          "@container-[size] relative inline-flex aspect-[9/4] items-center justify-center align-middle [--eye-color:currentColor] [--pupil-color:color-mix(in_srgb,currentColor_20%,black)]",
+          "@container-[size] relative inline-flex aspect-9/4 items-center justify-center align-middle [--eye-color:color-mix(in_srgb,currentColor_16%,transparent)] [--pupil-color:currentColor]",
           className,
         )}
         style={eyesStyle}
@@ -110,7 +107,7 @@ function WanderingEyes({
       >
         <span
           aria-hidden="true"
-          className="inline-flex items-center justify-center gap-[var(--loading-ui-wandering-eyes-gap)]"
+          className="inline-flex items-center justify-center gap-(--loading-ui-wandering-eyes-gap)"
         >
           {Array.from({ length: 2 }, (_, index) => (
             <span
@@ -123,7 +120,8 @@ function WanderingEyes({
                 backgroundImage:
                   "radial-gradient(circle calc(var(--loading-ui-wandering-eyes-eye) * var(--loading-ui-wandering-eyes-pupil-scale)), var(--pupil-color) 100%, transparent 0)",
                 backgroundRepeat: "no-repeat",
-                animation: `${MOVE_ANIMATION} var(--duration, 10s) infinite, ${BLINK_ANIMATION} var(--duration, 10s) infinite`,
+                animation:
+                  "loading-ui-wandering-eyes-move var(--duration, 10s) infinite, loading-ui-wandering-eyes-blink var(--duration, 10s) infinite",
               }}
             />
           ))}

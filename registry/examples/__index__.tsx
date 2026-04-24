@@ -3787,6 +3787,19 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "wandering-eyes-color": {
+    name: "wandering-eyes-color",
+    filePath: "registry/examples/wandering-eyes/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wandering-eyes/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "wandering-eyes-demo": {
     name: "wandering-eyes-demo",
     filePath: "registry/examples/wandering-eyes/demo.tsx",
@@ -3797,6 +3810,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "wandering-eyes-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wandering-eyes-duration": {
+    name: "wandering-eyes-duration",
+    filePath: "registry/examples/wandering-eyes/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wandering-eyes/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wandering-eyes-expression": {
+    name: "wandering-eyes-expression",
+    filePath: "registry/examples/wandering-eyes/expression.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wandering-eyes/expression.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-expression";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wandering-eyes-size": {
+    name: "wandering-eyes-size",
+    filePath: "registry/examples/wandering-eyes/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wandering-eyes/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "wandering-eyes-variables": {
+    name: "wandering-eyes-variables",
+    filePath: "registry/examples/wandering-eyes/variables.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./wandering-eyes/variables.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "wandering-eyes-variables";
       return { default: mod.default || mod[exportName] };
     }),
   },

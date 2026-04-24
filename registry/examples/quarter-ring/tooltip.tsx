@@ -12,7 +12,7 @@ export default function QuarterRingTooltip() {
     <TooltipProvider delay={100}>
       <Tooltip>
         <TooltipTrigger render={<Button variant="ghost" size="sm" />}>
-          Live estimate
+          Hover over me
         </TooltipTrigger>
         <TooltipContent className="max-w-xs gap-2">
           <QuarterRing className="size-3.5 shrink-0" />
