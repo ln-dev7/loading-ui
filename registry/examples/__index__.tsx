@@ -2448,6 +2448,32 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "skeleton-avatar": {
+    name: "skeleton-avatar",
+    filePath: "registry/examples/skeleton/avatar.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./skeleton/avatar.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-avatar";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "skeleton-card": {
+    name: "skeleton-card",
+    filePath: "registry/examples/skeleton/card.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./skeleton/card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-card";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "skeleton-demo": {
     name: "skeleton-demo",
     filePath: "registry/examples/skeleton/demo.tsx",
@@ -2458,6 +2484,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "skeleton-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "skeleton-duration": {
+    name: "skeleton-duration",
+    filePath: "registry/examples/skeleton/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./skeleton/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "skeleton-form": {
+    name: "skeleton-form",
+    filePath: "registry/examples/skeleton/form.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./skeleton/form.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-form";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "skeleton-table": {
+    name: "skeleton-table",
+    filePath: "registry/examples/skeleton/table.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./skeleton/table.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-table";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "skeleton-text": {
+    name: "skeleton-text",
+    filePath: "registry/examples/skeleton/text.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./skeleton/text.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "skeleton-text";
       return { default: mod.default || mod[exportName] };
     }),
   },

@@ -3,4 +3,99 @@ title: Skeleton
 description: A skeleton block placeholder for content that is still loading.
 ---
 
-Coming soon.
+`Skeleton` is a low-detail placeholder for content that has not loaded yet.
+Shape each block to match the layout it will replace so the page stays stable
+while data, images, or user details are still resolving.
+
+<ComponentPreview name="skeleton-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/skeleton
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="skeleton" title="components/loading-ui/skeleton.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Skeleton } from "@/components/loading-ui/skeleton";
+```
+
+```tsx
+<Skeleton className="h-5 w-[160px]" />
+```
+
+## Customization
+
+Use width, height, radius, and layout utilities to mirror the content that will
+replace each skeleton. The pulse speed is controlled with `--duration`.
+
+### Duration
+
+Set `--duration` on each skeleton, or on a parent wrapper, when a surface needs
+a faster or calmer pulse.
+
+<ComponentPreview name="skeleton-duration" />
+
+## Examples
+
+These examples follow common loading layouts where skeletons work best: user
+rows, content cards, paragraph copy, forms, and tabular data.
+
+### Avatar
+
+Use a circular skeleton beside text lines for user, account, or comment rows.
+
+<ComponentPreview name="skeleton-avatar" />
+
+### Card
+
+Cards can reserve media, title, metadata, and author space while the full
+content is fetched.
+
+<ComponentPreview name="skeleton-card" />
+
+### Text
+
+Stack line skeletons with varied widths to suggest headings and body copy.
+
+<ComponentPreview name="skeleton-text" />
+
+### Form
+
+Form skeletons should preserve label, input, and action spacing so the final
+fields do not shift into place.
+
+<ComponentPreview name="skeleton-form" />
+
+### Table
+
+Use repeated rows to hold dense layouts steady while records load.
+
+<ComponentPreview name="skeleton-table" />
