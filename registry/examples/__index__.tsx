@@ -1499,6 +1499,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] };
     }),
   },
+  "infinity-badge": {
+    name: "infinity-badge",
+    filePath: "registry/examples/infinity/badge.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/badge.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-badge";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-button": {
+    name: "infinity-button",
+    filePath: "registry/examples/infinity/button.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/button.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-button";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-card": {
+    name: "infinity-card",
+    filePath: "registry/examples/infinity/card.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/card.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-card";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-color": {
+    name: "infinity-color",
+    filePath: "registry/examples/infinity/color.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/color.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-color";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
   "infinity-demo": {
     name: "infinity-demo",
     filePath: "registry/examples/infinity/demo.tsx",
@@ -1509,6 +1561,58 @@ export const ExamplesIndex: Record<string, Record<string, any>> = {
           (key) =>
             typeof mod[key] === "function" || typeof mod[key] === "object",
         ) || "infinity-demo";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-duration": {
+    name: "infinity-duration",
+    filePath: "registry/examples/infinity/duration.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/duration.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-duration";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-empty": {
+    name: "infinity-empty",
+    filePath: "registry/examples/infinity/empty.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/empty.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-empty";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-size": {
+    name: "infinity-size",
+    filePath: "registry/examples/infinity/size.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/size.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-size";
+      return { default: mod.default || mod[exportName] };
+    }),
+  },
+  "infinity-stroke-width": {
+    name: "infinity-stroke-width",
+    filePath: "registry/examples/infinity/stroke-width.tsx",
+    component: React.lazy(async () => {
+      const mod = await import("./infinity/stroke-width.tsx");
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object",
+        ) || "infinity-stroke-width";
       return { default: mod.default || mod[exportName] };
     }),
   },

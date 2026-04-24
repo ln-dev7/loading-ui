@@ -3,4 +3,114 @@ title: Infinity
 description: An infinity-path animation for long-running or continuous loading.
 ---
 
-Coming soon.
+`InfinityLoop` draws a continuous dash around an infinity path. It is a good
+fit for live sync, monitoring, background jobs, and long-running states where
+there is no useful percent-complete value.
+
+<ComponentPreview name="infinity-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">Command</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @loading-ui/infinity
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps className="mb-0 pt-2">
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="infinity" title="components/loading-ui/infinity.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { InfinityLoop } from "@/components/loading-ui/infinity";
+```
+
+```tsx
+<InfinityLoop className="h-12 w-16" />
+```
+
+## Customization
+
+`InfinityLoop` is an SVG that inherits `currentColor`. Use stable height and
+width utilities to keep the loop balanced, target the path for line weight, and
+set `--duration` to tune the dash speed.
+
+### Size
+
+The loop reads best with a slightly wider box than it is tall.
+
+<ComponentPreview name="infinity-size" />
+
+### Color
+
+The stroke uses `currentColor`, so text utilities and inherited foreground
+colors are enough.
+
+<ComponentPreview name="infinity-color" />
+
+### Duration
+
+Set `--duration` when the loop should feel fast for active sync or slower for
+ambient background work.
+
+<ComponentPreview name="infinity-duration" />
+
+### Stroke Width
+
+Target the path when the loop needs a lighter or heavier stroke at a given size.
+
+<ComponentPreview name="infinity-stroke-width" />
+
+## Examples
+
+These examples keep the loop tied to continuous states: syncing, monitoring,
+streaming updates, and long-running background activity.
+
+### Button
+
+Buttons work well when a command starts an ongoing sync or keeps a connection
+alive.
+
+<ComponentPreview name="infinity-button" />
+
+### Badge
+
+Badges can keep continuous status visible without adding a full loading row.
+
+<ComponentPreview name="infinity-badge" />
+
+### Card
+
+Cards give the loop enough room to explain a background process that continues
+while the rest of the page stays interactive.
+
+<ComponentPreview name="infinity-card" />
+
+### Empty
+
+Empty states can use the loop for long-running setup, sync, or monitoring
+states that may not finish immediately.
+
+<ComponentPreview name="infinity-empty" />
