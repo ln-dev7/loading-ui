@@ -24,19 +24,20 @@ type LinksProps = {
 
 export function Links({ className }: LinksProps) {
   return (
-    <div className={cn("flex items-center gap-1", className)}>
-      {LINKS.map((link) => (
-        <Link
-          key={link.label}
-          href={link.href}
-          className={cn(
-            navigationMenuTriggerStyle(),
-            "h-auto bg-transparent px-3 py-1.5 shadow-none transition-all",
-          )}
-        >
-          {link.label}
-        </Link>
+    <ul className={cn("flex items-center gap-1", className)}>
+      {LINKS.map(link => (
+        <li key={link.label}>
+          <Link
+            href={link.href}
+            className={cn(
+              navigationMenuTriggerStyle(),
+              "h-auto bg-transparent px-3 py-1.5 shadow-none transition-all",
+            )}
+          >
+            {link.label}
+          </Link>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

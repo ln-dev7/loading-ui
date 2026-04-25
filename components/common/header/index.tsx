@@ -13,9 +13,9 @@ import { MobileNav } from "@/components/common/header/mobile-nav";
 
 export const Header = () => {
   return (
-    <div className="bg-fd-background/80 sticky inset-x-0 top-0 z-40 h-(--header-height) border-b backdrop-blur-sm transition-colors">
+    <header className="bg-fd-background/80 sticky inset-x-0 top-0 z-40 h-(--header-height) border-b backdrop-blur-sm transition-colors">
       <div className="container mx-auto flex size-full items-center justify-between px-3 md:px-4">
-        <div className="flex items-center gap-3">
+        <nav className="flex items-center gap-3">
           <Link
             className={cn(
               buttonVariants({ variant: "ghost" }),
@@ -26,7 +26,7 @@ export const Header = () => {
             <Logo />
           </Link>
           <Links className="hidden gap-1 md:flex" />
-        </div>
+        </nav>
 
         <div className="flex items-center md:gap-2">
           <Search className="hidden md:flex" />
@@ -40,6 +40,6 @@ export const Header = () => {
           />
         </div>
       </div>
-    </div>
+    </header>
   );
 };

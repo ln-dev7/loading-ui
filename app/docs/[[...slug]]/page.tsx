@@ -25,7 +25,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const neighbours = findNeighbour(source.getPageTree(), page.url);
 
   return (
-    <div
+    <main
       data-slot="docs"
       className="flex w-full scroll-mt-24 items-stretch text-[1.05rem] sm:text-[15px]"
     >
@@ -129,7 +129,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
         ) : null}
         <TurbostarterCta />
       </div>
-    </div>
+    </main>
   );
 }
 

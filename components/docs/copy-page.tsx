@@ -161,6 +161,7 @@ export function DocsCopyPage({ page, url }: { page: string; url: string }) {
       className="peer -ml-0.5 shadow-none md:text-[0.8rem]"
     >
       <ChevronDown className="rotate-180 sm:rotate-0" />
+      <span className="sr-only">Actions</span>
     </Button>
   );
 
