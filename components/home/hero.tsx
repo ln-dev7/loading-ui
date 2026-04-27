@@ -30,27 +30,26 @@ export const Hero = () => {
         project. Free and open source, forever.
       </HeroSectionDescription>
 
-        <div className="mx-auto inline-flex w-fit flex-wrap items-center justify-center gap-3">
-          <Installer
-            command={Object.keys(Index).map((name) => getCLICommand(name))}
-            className="w-full sm:w-auto"
-          />
-          <a
-            className={buttonVariants({
-              className: "px-3.5 md:h-10",
-            })}
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <span className="sr-only">Star on GitHub</span>
-            <Icons.gitHub className="size-3.5 md:size-4" />
-            <div className="border-background/25 ml-1.5 flex h-full items-center justify-center gap-1.5 border-l pl-2.5">
-              <Star className="-mt-px size-3.5 fill-current text-yellow-500 md:size-4" />
-              {stars}
-            </div>
-          </a>
-        </div>
+      <div className="mx-auto inline-flex w-fit flex-wrap items-center justify-center gap-3">
+        <Installer
+          command={Object.keys(Index).map((name) => getCLICommand(name))}
+          className="w-full sm:w-auto"
+        />
+        <a
+          className={buttonVariants({
+            className: "px-3.5 md:h-10",
+          })}
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <span className="sr-only">Star on GitHub</span>
+          <Icons.gitHub className="size-3.5 md:size-4" />
+          <div className="border-background/25 ml-1.5 flex h-full items-center justify-center gap-1.5 border-l pl-2.5">
+            <Star className="-mt-px size-3.5 fill-current text-yellow-500 md:size-4" />
+            {stars}
+          </div>
+        </a>
       </div>
     </HeroSection>
   );
