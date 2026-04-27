@@ -47,10 +47,10 @@ export const Hero = () => {
           project. Free and open source, forever.
         </p>
 
-        <div className="mx-auto inline-flex w-fit justify-center flex-wrap items-center gap-3">
+        <div className="mx-auto inline-flex w-fit flex-wrap items-center justify-center gap-3">
           <Installer
             command={Object.keys(Index).map((name) => getCLICommand(name))}
-            className="w-60 text-xs md:w-72"
+            className="w-full sm:w-auto"
           />
           <a
             className={buttonVariants({
@@ -62,8 +62,8 @@ export const Hero = () => {
           >
             <span className="sr-only">Star on GitHub</span>
             <Icons.gitHub className="size-3.5 md:size-4" />
-            <div className="border-l border-background/25 h-full ml-1.5 flex items-center justify-center pl-2.5 gap-1.5">
-              <Star className="size-3.5 md:size-4 text-yellow-500 fill-current -mt-px" />
+            <div className="border-background/25 ml-1.5 flex h-full items-center justify-center gap-1.5 border-l pl-2.5">
+              <Star className="-mt-px size-3.5 fill-current text-yellow-500 md:size-4" />
               {stars}
             </div>
           </a>

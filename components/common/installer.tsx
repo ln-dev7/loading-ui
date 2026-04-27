@@ -8,10 +8,12 @@ import {
   InputGroupButton,
   InputGroupText,
 } from "@/components/ui/input-group";
+import { WordRotate } from "@/components/ui/word-rotate";
 import { cn } from "@/lib/utils";
 
 const COPY_TIMEOUT = 2000;
-const LOOP_INTERVAL = 1500;
+const LOOP_INTERVAL = 2000;
+const ROTATION_DURATION = 250;
 
 interface InstallerProps {
   className?: string;
@@ -37,12 +39,14 @@ const getCommonPrefix = (values: string[]) => {
 
 export const Installer = ({
   command,
-  className = "w-48",
+  className,
   interval = LOOP_INTERVAL,
 }: InstallerProps) => {
   const commands = Array.isArray(command) ? command : [command];
   const prefix = getCommonPrefix(commands);
   const suffixes = commands.map((c) => c.slice(prefix.length));
+  const maxCommandLength = Math.max(...commands.map((value) => value.length));
+  const maxSuffixLength = Math.max(...suffixes.map((value) => value.length));
 
   const [index, setIndex] = useState(0);
   const [copied, setCopied] = useState(false);
@@ -54,7 +58,7 @@ export const Installer = ({
 
   useEffect(() => {
     if (commands.length <= 1) {
-      return;
+      return undefined;
     }
 
     const timer = setInterval(() => {
@@ -76,18 +80,21 @@ export const Installer = ({
   const Icon = copied ? CheckIcon : CopyIcon;
 
   return (
-    <InputGroup className="bg-background h-9 px-1 font-mono md:h-10 w-fit">
+    <InputGroup
+      className={cn(
+        "bg-background h-9 max-w-[calc(100vw-2rem)] px-1 font-mono md:h-10",
+        className,
+      )}
+      style={{
+        width: `${maxCommandLength + 6}ch`,
+      }}
+    >
       <InputGroupAddon>
         <InputGroupText className="text-muted-foreground font-normal">
           $
         </InputGroupText>
       </InputGroupAddon>
-      <div
-        className={cn(
-          "relative flex flex-1 items-center overflow-hidden whitespace-nowrap pl-1 text-base md:text-sm",
-          className,
-        )}
-      >
+      <div className="relative flex min-w-0 flex-1 items-center overflow-hidden pl-1 text-[11px] whitespace-nowrap sm:text-xs md:text-sm">
         <span aria-live="polite" className="sr-only">
           {currentCommand}
         </span>
@@ -96,13 +103,21 @@ export const Installer = ({
             {prefix}
           </span>
         )}
-        <span
-          aria-hidden="true"
-          key={index}
-          className="inline-block animate-in fade-in slide-in-from-top-1 duration-300 ease-out"
-        >
-          {currentSuffix}
-        </span>
+        {suffixes.length > 1 ? (
+          <WordRotate
+            aria-hidden="true"
+            animationDuration={ROTATION_DURATION}
+            className="shrink-0 leading-none"
+            duration={interval}
+            index={index}
+            style={{ width: `${maxSuffixLength}ch` }}
+            words={suffixes}
+          />
+        ) : (
+          <span aria-hidden="true" className="shrink-0">
+            {currentSuffix}
+          </span>
+        )}
       </div>
       <InputGroupAddon align="inline-end">
         <InputGroupButton
